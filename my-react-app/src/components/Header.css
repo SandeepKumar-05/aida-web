@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 header {
-    width: 100ev;
-    height: 133px;
+    width: 35%;
+    height: 45px;
     flex-shrink: 0;
-    background: linear-gradient(90deg, #FFF 0%, #CC6161 24.1%, #340000 100%);
+    border-radius: 55px;
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%);
+}
+
+.HeadComp{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 header nav {
@@ -30,20 +38,15 @@ header nav {
     
 }
 .navlist li {
-    
     list-style: none;
     margin: 0 10px;
-    padding: 0;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
 }
 .navlist li a {
     text-decoration: none;
-    color: #FFF;
+    color: #000000;
     text-align: center;
     font-family: 'Lato';
-    font-size: 48px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

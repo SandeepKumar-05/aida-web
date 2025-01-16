@@ -1,12 +1,15 @@
-import Header from "./Header"
-import Footer from "./Footer";
-import Food from "./Food";
+import Header from "./components/Header"
+import Footer from "./components/Footer";
+import Food from "./components/Food";
+import Intro from "./components/Intro";
+import './App.css';
 
 function App() {
     return (
-      <>
+      <div className="App">
         <Header />
-      </>
+        <Intro />
+      </div>
     );
 }
 
