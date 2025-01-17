@@ -1,11 +1,25 @@
-.tester {
+    .tester0 {
     color: white;
     display: flex;
     width: 100%;
     justify-content: center ;
 }
 
-.tester p {
+.tester1 {
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center ;
+}
+
+.tester2 {
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center ;
+}
+
+.tester0 .TypeAnimation {
     text-indent: 40px;
     width: 55%;
     font-size: 20px;
@@ -13,4 +27,39 @@
     line-height: 1.5;
     text-align: justify;
     margin-top: 20px;
+}
+
+.tester1 p {
+    /* text-indent: 40px; */
+    width: 55%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: end;
+    margin-top: 20px;
+}
+
+.tester2 p {
+    /* text-indent: 40px; */
+    width: 55%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: start;
+    margin-top: 20px;
+}
+
+.ChatBot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.ChatBot2 {
+    display: flex;
+    visibility: hidden;
+    width: 200px;
+    height: 200px;
 }
