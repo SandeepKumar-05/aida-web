@@ -1,4 +1,6 @@
-    .tester0 {
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
+.tester0 {
     color: white;
     display: flex;
     width: 100%;
@@ -19,7 +21,7 @@
     justify-content: center ;
 }
 
-.tester0 .TypeAnimation {
+.TypeAnimation0 {
     text-indent: 40px;
     width: 55%;
     font-size: 20px;
@@ -27,6 +29,42 @@
     line-height: 1.5;
     text-align: justify;
     margin-top: 20px;
+    color: #FFF;
+    font-family: 'Afacad';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.TypeAnimation1 {
+    width: 75%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 20px;
+    color: #FFF;
+    font-family: 'Afacad';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.TypeAnimation2 {
+    width: 55%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 20px;
+    color: #FFF;
+    font-family: 'Afacad';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .tester1 p {
@@ -55,6 +93,7 @@
     align-items: center;
     width: 200px;
     height: 200px;
+    
 }
 
 .ChatBot2 {
