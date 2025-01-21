@@ -28,28 +28,28 @@ function Recent() {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiperR"
       >
         <SwiperSlide>
-          <div className="slide">
+          <div className="slideR">
           <img className="eventImg" src={pic} alt="pic"></img>
           <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide">
+          <div className="slideR">
           <img className="eventImg" src={pic} alt="pic"></img>
           <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide">
+          <div className="slideR">
           <img className="eventImg" src={pic} alt="pic"></img>
           <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide">
+          <div className="slideR">
           <img className="eventImg" src={pic} alt="pic"></img>
           <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
           </div>

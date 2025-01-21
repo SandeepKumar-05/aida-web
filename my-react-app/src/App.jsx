@@ -35,6 +35,7 @@ function App() {
         />
         <Para fontsize="30px" content="The core team serves as the backbone of our organization, guiding its growth, shaping its vision, and ensuring the successful implementation of its initiatives.meet our core team"/>
         {/* <Members /> */}
+        <Members />
       </div>
     );
 }

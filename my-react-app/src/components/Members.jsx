@@ -1,58 +1,68 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
+import './Members.css';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
+import { EffectCoverflow} from 'swiper/modules';
 
 import pic from './assets/event.png';
 import Para from './Para';
 
 
 function Members(props) {
-
+  const data = [
+            1,2,3,4
+        ];
     return (
-        <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div className="slide">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak.Know more!"/>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    );
-}
+            <Swiper
+            initialSlide={(data.length/2)-1}
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={'3'}
+              coverflowEffect={{
+                rotate: 30,
+                stretch: 4,
+                depth: 300,
+                modifier: 0.8,
+                slideShadows: true,
+
+              }}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              // pagination={true}
+              navigation={true}
+              modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
+              className="mySwiperM"
+            >
+              <SwiperSlide>
+                <div className='slideM'>
+                  <img className='eventImgM' src={pic} alt='pic'></img>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='slideM'>
+                  <img className='eventImgM' src={pic} alt='pic'></img>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='slideM'>
+                  <img className='eventImgM' src={pic} alt='pic'></img>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='slideM'>
+                  <img className='eventImgM' src={pic} alt='pic'></img>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+            );
+      };
+      
 
 export default Members;
