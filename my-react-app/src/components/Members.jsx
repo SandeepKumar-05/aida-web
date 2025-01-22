@@ -16,6 +16,7 @@ function Members(props) {
   const data = [
             1,2,3,4
         ];
+// 
     return (
             <Swiper
             initialSlide={(data.length/2)-1}
