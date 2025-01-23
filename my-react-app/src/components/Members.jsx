@@ -14,7 +14,7 @@ import Para from './Para';
 
 function Members(props) {
   const data = [
-            1,2,3,4
+            1,2,3,4,5
         ];
 // 
     return (
@@ -41,26 +41,18 @@ function Members(props) {
               modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
               className="mySwiperM"
             >
-              <SwiperSlide>
-                <div className='slideM'>
-                  <img className='eventImgM' src={pic} alt='pic'></img>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='slideM'>
-                  <img className='eventImgM' src={pic} alt='pic'></img>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='slideM'>
-                  <img className='eventImgM' src={pic} alt='pic'></img>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='slideM'>
-                  <img className='eventImgM' src={pic} alt='pic'></img>
-                </div>
-              </SwiperSlide>
+              {data.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="card">
+                    <div className="card__image-container">
+                      <img src={pic} alt="event" className="card__image" />
+                    </div>
+                    <div className="card__content">
+                      <h1 className="card__title">Event</h1>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
             );
       };
