@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow} from 'swiper/modules';
 
-import pic from './assets/event.png';
+import pic from './assets/cube.gif';
 import Para from './Para';
 
 

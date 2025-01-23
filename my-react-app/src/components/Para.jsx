@@ -1,5 +1,5 @@
 import './Para.css';
-import ChatBot from './assets/chatbot.png';
+import ChatBot from './assets/cube.gif';
 import {TypeAnimation} from 'react-type-animation';
 function Para(props) {
     if (props.indexImg === 1) {
