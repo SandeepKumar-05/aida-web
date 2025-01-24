@@ -7,6 +7,7 @@
     background: #000;
     /* box-shadow: 0px 4px 30px 30px #111010; */
     /* margin-bottom: 100px; */
+    padding-bottom: 40px;
 
 }
 
@@ -79,7 +80,7 @@
 .btn{
     background: #000;
     color: white;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgba(255, 0, 0, 0.767);
     border-radius: 20px;
     padding: 10px 20px;
     font-family: 'Afacad';
@@ -88,6 +89,5 @@
 }
 
 .btn:hover{
-    background: white;
-    color: black;
+    background: rgb(174, 0, 0);
 }

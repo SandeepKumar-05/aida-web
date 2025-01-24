@@ -11,7 +11,7 @@ function ChatAnswer(props) {
                 <p>{props.content}</p>
             </div>
         </div>
-        <img src={pic} className='chatButtons' alt='chat buttons'></img>
+        {/* <img src={pic} className='chatButtons' alt='chat buttons'></img> */}
         </>
     );
 }

@@ -16,6 +16,7 @@
     width: 100%;
     display: flex;
     justify-content: start;
+    margin-bottom: 30px;
 }
 
 .chatBoxA p {
