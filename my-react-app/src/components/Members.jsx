@@ -11,13 +11,22 @@ import { EffectCoverflow} from 'swiper/modules';
 import pic from './assets/cube.gif';
 import Para from './Para';
 
+function Filter(props) {
+      document.getElementById("mySwiperM").style = {display: none,color};
+}
+
 
 function Members(props) {
   const data = [
-            1,2,3,4,5
+    { id: 1, name: 'John Doe', age: 25 },
+    { id: 2, name: 'Jane Doe', age: 24 },
+    { id: 3, name: 'John Smith', age: 23 },
+    { id: 4, name: 'Jane Smith', age: 22 },
         ];
 // 
     return (
+            <div className="members">
+            <button className="btn">Filter</button>
             <Swiper
             initialSlide={(data.length/2)-1}
               effect={'coverflow'}
@@ -48,12 +57,14 @@ function Members(props) {
                       <img src={pic} alt="event" className="card__image" />
                     </div>
                     <div className="card__content">
-                      <h1 className="card__title">Event</h1>
+                      <h1 className="card__title">{item.name}</h1>
+                      <p className="card__text">HELLO</p>
                     </div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
+            </div>
             );
       };
       
