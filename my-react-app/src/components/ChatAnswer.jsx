@@ -1,5 +1,5 @@
 import './ChatAnswer.css'
-import svg from "./assets/react.svg"
+import svg from "./assets/react.png"
 import pic from "./assets/chatButtons.png"
 
 function ChatAnswer(props) {

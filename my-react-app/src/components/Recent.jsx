@@ -16,7 +16,7 @@ import { TypeAnimation } from "react-type-animation";
 function Recent() {
     return (
       <>
-      <Para fontsize="30px" content="       Let's have a look on what's happening on AIDA" indexImg={1}></Para>
+      <Para fontsize="30px" content="Let's have a look on what's happening on AIDA" indexImg={10}></Para>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -31,6 +31,7 @@ function Recent() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiperR"
       >
+        
         <SwiperSlide>
           <div className="slideR">
           <img className="eventImg" src={pic} alt="pic"></img>

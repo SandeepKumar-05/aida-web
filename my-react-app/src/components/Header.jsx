@@ -8,9 +8,9 @@ function Header() {
                 <nav>
                     <img src={pic} alt="Docplanner Group" className='image' />
                     <ul className='navlist'>
-                        <li><a href="#" className='link'>About us</a></li>
-                        <li><a href="#" className='link'>Career</a></li>
-                        <li><a href="#" className='link'>Departments</a></li>
+                        <li><a href="#" >About us</a></li>
+                        <li><a href="#" >Career</a></li>
+                        <li><a href="#" >Departments</a></li>
                     </ul>
                 </nav>
             </header></div>

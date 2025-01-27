@@ -18,7 +18,7 @@ function Filter(props) {
 
 function Members(props) {
   const data = [
-    { id: 1, name: 'John Doe', age: 25 },
+    { id: 1, name: 'John Doe', age: 25 }, 
     { id: 2, name: 'Jane Doe', age: 24 },
     { id: 3, name: 'John Smith', age: 23 },
     { id: 4, name: 'Jane Smith', age: 22 },
@@ -58,7 +58,7 @@ function Members(props) {
                     </div>
                     <div className="card__content">
                       <h1 className="card__title">{item.name}</h1>
-                      <p className="card__text">HELLO</p>
+                      <p className="card__text">HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO </p>
                     </div>
                   </div>
                 </SwiperSlide>

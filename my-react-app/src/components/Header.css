@@ -48,13 +48,19 @@ header nav {
     text-decoration: none;
     color: #ffffff;
     text-align: center;
-    font-family: 'Lato';
-    font-size: 12px;
+    font-family: 'Afacad';
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-/* .link {
-    font-size: large;
-} */
+@media screen and (max-width: 768px) {
+    .navlist li a {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}

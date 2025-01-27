@@ -25,6 +25,29 @@ function Para(props) {
             </div>
         );
     }
+    else if (props.indexImg === 10) {
+        return (
+            <div className='tester1'>
+                <TypeAnimation
+                className='TypeAnimation10' 
+                cursor={false}
+                splitter={
+                    (str) => str.split(/(?= )/)
+                }
+                sequence={
+                    [
+                        props.content,
+                    ]
+                }
+                speed={{ type: 'keyStrokeDelayInMs',value: 70 }}
+                style={{color: props.color,fontSize: props.fontsize}}
+                deletionSpeed={0}
+                repeat={true}
+                wrapper='span'
+                />
+            </div>
+        );
+    }
     else if (props.indexImg === 2) {
         return (
             <div className='tester2'>
