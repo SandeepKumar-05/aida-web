@@ -34,9 +34,8 @@ function Home() {
         content="'' What's your origin story? Every hero has one! ''" 
         />
         <ChatAnswer
-        content="The Department of Artificial Intelligence & Data Science at Jyothi Engineering College was established in 2020 and is affiliated with KTU University, marking it as one of the first departments to introduce this course. Here, we seamlessly integrate Computer Science fundamentals with the cutting-edge realms of AI and Data Science.
-Our accomplished faculty, seasoned experts in both AI and Computer Science, ensure a well-rounded education, bringing a perfect blend of theoretical knowledge and practical industry insights to offer students a holistic understanding of technology in our dynamic department.
-Immerse yourself in a dynamic learning environment at our department, where well-established labs, equipped with state-of-the-art technology, cater to both Computer Science and AI requirements. Benefit from air-conditioned classrooms fostering academic excellence, ensuring mastery of fundamentals while staying at the forefront of technological advancements. Engage in groundbreaking research projects led by faculty members excelling in both AI and Computer Science, showcasing our commitment to innovation and offering diverse exploration, from classic algorithms to the latest advancements in artificial intelligence."
+        content="The Department of Artificial Intelligence & Data Science at Jyothi Engineering College was established in 2020 and is affiliated with KTU , marking it as one of the first colleges to introduce this course.
+Our accomplished faculty, seasoned experts in both AI , ensure a well-rounded education,engaging in groundbreaking research projects led by faculty members excelling in both AI , showcasing our commitment to innovation and offering diverse exploration, from classic algorithms to the latest advancements in artificial intelligence."
         />
         <Para fontsize="30px" content="The core team serves as the backbone of our organization, guiding its growth, shaping its vision, and ensuring the successful implementation of its initiatives.meet our core team"/>
         <Members />

@@ -1,5 +1,5 @@
 import React from "react";
-import "./EventsPage.css";
+import "./eventspage.css";
 import pic from "./assets/event.png"
 
 const events = [
