@@ -1,0 +1,30 @@
+.chatBoxQ {
+    width: 35%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #303030;
+    margin-right: 11%;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+
+.chatWindowQ {
+    /* margin-top: 20px; */
+    /* padding-right: 100px; */
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+}
+
+.chatBoxQ p {
+    text-align: justify;
+    margin: 0;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ecece6;
+    font-family: "Afacad";
+}
