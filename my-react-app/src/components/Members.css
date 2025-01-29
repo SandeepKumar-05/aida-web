@@ -1,100 +1,119 @@
-.mySwiperM{
-    border: 10px solid red;
-    width: 50%;
-    height: fit-content;
-    border-radius: 40px;
-    border: 30px solid #000;
-    background: #000;
-    /* box-shadow: 0px 4px 30px 30px #111010; */
-    /* margin-bottom: 100px; */
-    padding-top: 2%;
-    padding-bottom: 40px;
+/* Main Swiper Container */
+.mainDiv{
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+select{
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.mySwiperM {
+    border: 30px solid #000; /* Outer border */
+    border-radius: 40px; /* Rounded corners */
+    background: #000; /* Background color */
+    width: 60%; /* Adjusted width for better responsiveness */
+    max-width: 1200px; /* Maximum width to prevent it from being too wide */
+    height: fit-content; /* Height adjusts to content */
+    padding: 2% 0 40px; /* Padding at the top and bottom */
+    margin: 0 auto; /* Center the swiper */
+    display: flex; /* Flexbox layout */
 }
 
+/* Card Styles */
 .card {
-    border-radius: 30px;
-    border: 1px solid #fb0000;
-    background: #000;
-    box-shadow: 0px 4px 20px 10px rgba(99, 91, 91, 0.25);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    border-radius: 30px; /* Rounded corners */
+    border: 1px solid #fb0000; /* Card border */
+    background: #000; /* Card background */
+    box-shadow: 0px 4px 20px 10px rgba(99, 91, 91, 0.25); /* Shadow effect */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    width:250px; /* Full width */
+    height: 350px; /* Height adjusts to content */
+    padding: 20px;
+    margin-bottom: 10px; /* Padding inside the card */
 }
 
-.card__content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 30px; */
+/* Card Content */
+.card__content {
+    position: relative;
+    top: 20px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    justify-content: center; /* Center items */
 }
 
-.card__title{
-    color: white;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    font-family: 'Afacad';
-    font-size: 30px;
+/* Card Title */
+.card__title {
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    font-family: 'Afacad'; /* Font family */
+    font-size: 24px; /* Adjusted font size for better readability */
+    margin: 10px 0; /* Margin for spacing */
 }
 
-.card__text{
-    color: white;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    font-family: 'Afacad';
-    font-size: 15px;
-    margin-top: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
+/* Card Text */
+.card__text {
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    font-family: 'Afacad'; /* Font family */
+    font-size: 14px; /* Adjusted font size for better readability */
+    margin: 0; /* No margin */
+    padding: 0 10px; /* Horizontal padding */
 }
 
-.card__image{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    width: 200px;
-    height: 200px;
-    /* width: 300px; */
-    /* height: 350px; */
-    /* box-shadow: 0px 4px 30px 30px #111010; */
-    border-radius: 25px;
+/* Card Image */
+.card__image {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    margin-top: 20px; /* Reduced margin for better spacing */
+    width: 200px; /* Adjusted image width */
+    height: 200px; /* Adjusted image height */
+    border-radius: 25px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the area */
 }
 
-.card__image-container{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    /* margin-top: 12px; */
-    /* margin-left: 14px; */
-    /* box-shadow: 0px 4px 30px 30px #111010; */
+/* Image Container */
+.card__image-container {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    width: 100%; /* Full width */
+    height: auto; /* Height adjusts to content */
 }
 
-.members{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+/* Members Section */
+.members {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items */
+    margin-top: 50px; /* Margin at the top */
 }
 
-.btn{
-    background: #000;
-    color: white;
-    border: 1px solid rgba(255, 0, 0, 0.767);
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-family: 'Afacad';
-    font-size: 20px;
-    margin-top: 20px;
+/* Button Styles */
+.btn {
+    background: #000; /* Button background */
+    color: white; /* Text color */
+    border: 1px solid rgba(255, 0, 0, 0.767); /* Button border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    font-family: 'Afacad'; /* Font family */
+    font-size: 18px; /* Adjusted font size for better readability */
+    margin-top: 20px; /* Margin at the top */
+    transition: background 0.3s; /* Smooth transition for hover effect */
 }
 
-.btn:hover{
-    background: rgb(174, 0, 0);
+/* Button Hover Effect */
+.btn:hover {
+    background: rgb(174, 0, 0); /* Background color on hover */
 }

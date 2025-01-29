@@ -45,8 +45,8 @@ function Header() {
                     </ul>
                 </nav>
                 <div className={`${navActive ? 'nav-active' : 'nav-inactive'}`}>
-                    <li><Link to="/members">Members</Link></li>
-                    <li><Link to="/verify">Verify Certificate</Link></li>
+                    <li><Link to="/faculty" className='list-item'>Members</Link></li>
+                    <li><Link to="/verify" className='list-item'>Verify Certificate</Link></li>
                 </div>
             </header>
         </div>

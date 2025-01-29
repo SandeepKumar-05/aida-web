@@ -10,6 +10,7 @@ import Members from "./components/Members";
 import EventsPage from "./components/eventspage";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Event from "./components/popup";
 
 
 function Home() {

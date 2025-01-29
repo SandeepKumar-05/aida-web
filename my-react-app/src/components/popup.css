@@ -1,0 +1,40 @@
+.event {
+  background-color: #000000;
+  border: 1% solid;
+  border-color: #000000;
+  border-radius: 2%;
+  height: 45%;
+  overflow: hidden;
+  position: relative;
+  width: 97%;
+}
+
+.event .META-HUB-boot-camp-a {
+  color: transparent;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 2.5%;
+  font-weight: 400;
+  left: 44%;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4%;
+  width: 50%;
+}
+
+.event .text-wrapper {
+  color: #ffffff;
+}
+
+.event .span {
+  color: #3e7aae;
+}
+
+.event .whatsapp-image {
+  height: 34%;
+  left: 5%;
+  object-fit: cover;
+  position: absolute;
+  top: 6%;
+  width: 34%;
+}

@@ -77,6 +77,8 @@ header nav {
     position: absolute;
     top: 60px;
     transition: 0.5s ease-out;
+    border-radius: 20px;
+    background: #222121;
 
 }
 
@@ -90,6 +92,16 @@ header nav {
     right: 23%;
     background-color: #2a4157;
     opacity: 0;
+    border-radius: 20px;
+}
+
+.list-item{
+    color: #FFF;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,43 @@
+const dataset =[
+    { id: 1, name: 'ABHIRAM K R', role: 'media', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/ABHIRAM K R_media.jpg', year: 2023 },
+        { id: 2, name: 'Adithyan M P', role: 'chairman', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Adithyan M P_chairman.jpg', year: 2023 },
+        { id: 3, name: 'ADITYAN M SUNIL', role: 'media', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/ADITYAN M SUNIL_media.jpg', year: 2023 },
+        { id: 4, name: 'Alan C Vinoy', role: 'media', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Alan C Vinoy_media.jpg', year: 2023 },
+        { id: 5, name: 'ARUNIMA ANIL', role: 'vicechairperson', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/ARUNIMA ANIL_vicechairperson.jpg', year: 2023 },
+        { id: 6, name: 'Athvik S ', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Athvik S _executivemember.jpg', year: 2023 },
+        { id: 7, name: 'GOURI KP', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/GOURI KP_executivemember.jpg', year: 2023 },
+        { id: 8, name: 'Hameem Abdul Nassir', role: 'jointsecretary', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Hameem Abdul Nassir_jointsecretary.jpg', year: 2023 },
+        { id: 9, name: 'Haniel Henry', role: 'PRO', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Haniel Henry_PRO.jpg', year: 2023 },
+        { id: 10, name: 'HENNA MARIYA', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/HENNA MARIYA_executivemember.jpg', year: 2023 },
+        { id: 11, name: 'Nandana Anand', role: 'jointtreasurer', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Nandana Anand_jointtreasurer.jpg', year: 2023 },
+        { id: 12, name: 'Nikhitha Joy', role: 'treasurer', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Nikhitha Joy_treasurer.jpg', year: 2023 },
+        { id: 13, name: 'P A Avanindra', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/P A Avanindra_executivemember.jpg', year: 2023 },
+        { id: 14, name: 'Rahul Sreenivasan P', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Rahul Sreenivasan P_executivemember.jpeg', year: 2023 },
+        { id: 15, name: 'SACHIN RAJ M', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/SACHIN RAJ M_executivemember.jpg', year: 2023 },
+        { id: 16, name: 'Shah Zaad Hassan', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Shah Zaad Hassan_executivemember.jpg', year: 2023 },
+        { id: 17, name: 'SIYONA FAIMON', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/SIYONA FAIMON_executivemember.jpg', year: 2023 },
+        { id: 18, name: 'Sreekrishnan', role: 'secretary', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2023-2024/Sreekrishnan_secretary.JPG', year: 2023 },
+        { id: 19, name: 'Adithyan M Sunil', role: 'media', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Adithyan M Sunil_media.jpg', year: 2022 },
+        { id: 20, name: 'Arunima Anil', role: 'vicechairman', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Arunima Anil_vicechairman.jpg', year: 2022 },
+        { id: 21, name: 'Athvik S', role: 'pro', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Athvik S_pro.jpg', year: 2022 },
+        { id: 22, name: 'Bimal Roy', role: 'chairman', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Bimal Roy_chairman.jpg', year: 2022 },
+        { id: 23, name: 'Hameem Abdul Nassir', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Hameem Abdul Nassir_executivemember.jpg', year: 2022 },
+        { id: 24, name: 'Josten S', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Josten S_executivemember.jpg', year: 2022 },
+        { id: 25, name: 'Madhav', role: 'media', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Madhav_media.jpg', year: 2022 },
+        { id: 26, name: 'Mishal Muhammed EP', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Mishal Muhammed EP_executivemember.jpg', year: 2022 },
+        { id: 27, name: 'Muhammed Ajmal', role: 'treasurer', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Muhammed Ajmal_treasurer.jpg', year: 2022 },
+        { id: 28, name: 'Rahul Sreenivasan', role: 'media', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Rahul Sreenivasan_media.jpg', year: 2022 },
+        { id: 29, name: 'Reshma K R', role: 'jointtreasurer', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Reshma K R_jointtreasurer.jpeg', year: 2022 },
+        { id: 30, name: 'SACHIN RAJ M', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/SACHIN RAJ M_executivemember.jpg', year: 2022 },
+        { id: 31, name: 'Sreekrishnan', role: 'secretary', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Sreekrishnan_secretary.JPG', year: 2022 },
+        { id: 32, name: 'Sreelakshmi', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Sreelakshmi_executivemember.jpg', year: 2022 },
+        { id: 33, name: 'Sulekha', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Sulekha_executivemember.jpg', year: 2022 },
+        { id: 34, name: 'Surya Narayanan', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Surya Narayanan_executivemember.jpg', year: 2022 },
+        { id: 35, name: 'Thomas Raju', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Thomas Raju_executivemember.JPG', year: 2022 },
+        { id: 36, name: 'Vaishak M A', role: 'jointsecratary', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Vaishak M A_jointsecratary.jpg', year: 2022 },
+        { id: 37, name: 'Vivek', role: 'executivemember', link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Vivek_executivemember.jpg', year: 2022 }
+];
+
+  export default dataset;
+  
+

@@ -1,0 +1,40 @@
+.container {
+     width: 100%; 
+    height: auto; 
+    display: flex;
+    justify-content: center; 
+    padding: 2rem;
+}
+
+.component {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+@media (max-width: 1200px) {
+    .component {
+        grid-template-columns: repeat(4, 1fr); 
+}
+}
+
+@media (max-width: 1115px) {
+    .component {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 720px) {
+    .component {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .component {
+        grid-template-columns: 1fr; 
+    }
+}

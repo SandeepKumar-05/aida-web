@@ -9,6 +9,9 @@ import ChatQuestion from "./components/ChatQuestion";
 import ChatAnswer from "./components/ChatAnswer";
 import Members from "./components/Members";
 import EventsPage from "./components/eventspage";
+import Certificate from "./components/Certificate";
+import Faculty from "./components/Faculty";
+import Event from "./components/popup";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -17,13 +20,11 @@ function App() {
     return (
       <div className="App">
         <Router>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/events">Events</Link>
-        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/faculty" element={<Faculty />} />
+          <Route path="/verify" element={<Certificate />} />
         </Routes>
       </Router>
       </div>

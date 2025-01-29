@@ -30,6 +30,7 @@
 }
 
 .botIcon {
+    width: 50px;
     padding-top: 35px;
     align-self: flex-start;
     margin-left: 10%;
