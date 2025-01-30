@@ -4,13 +4,14 @@ import link from './assets/linkedin.svg'
 import insta from './assets/instagram.svg'
 import mail from './assets/email.svg'
 import pic from './assets/logo.png'
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <img src={pic} alt="AIDA logo" className="footer-logo" />
+          <Link to="/"><img src={pic} alt="AIDA logo" className="footer-logo" /></Link>
         </div>
         <div className="footer-right">
           <a href="https://www.linkedin.com/company/aida-association" className="footer-link">

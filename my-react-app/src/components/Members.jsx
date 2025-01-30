@@ -40,7 +40,7 @@ const Filter = () => {
         ))}
       </select>
     <Swiper
-            initialSlide={(filteredData.length/2)}
+            initialSlide={(filteredData.length/6-1)}
               effect={'coverflow'}
               grabCursor={true}
               centeredSlides={true}

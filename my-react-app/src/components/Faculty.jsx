@@ -4,6 +4,7 @@ import Card from './Card';
 import './Faculty.css';
 import contents from './content'; 
 import Header from './Header';
+import Footer from './Footer';
 
 function Faculty() {
   return (
@@ -14,13 +15,14 @@ function Faculty() {
         {contents.map(content => (
           <Card
           key={content.Id}
-          img={content.Img} 
+          img={content.link} 
           name={content.Name}
           position={content.Position}
           />
         ))}
       </div>
     </div>
+    <Footer></Footer>
     </>
   );
 }
