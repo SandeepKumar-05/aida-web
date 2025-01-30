@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import pic from "./assets/chatbot.png";
 import "./Certificate.css";
+import Header from "./Header";
 
 function Certificate() {
   const [input, setInput] = useState(""); // Stores user input
@@ -32,6 +33,7 @@ function Certificate() {
 
   return (
     <div className="container">
+      {/* <Header /> */}
       <div className="img_mainText">
         <img src={pic} alt="img" />
         <h2>Verify Your Certificates Here!</h2>

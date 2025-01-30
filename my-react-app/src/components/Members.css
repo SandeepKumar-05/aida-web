@@ -16,6 +16,8 @@ select{
     text-align: center;
     font-size: 1.2rem;
 }
+
+
 .mySwiperM {
     border: 30px solid #000; /* Outer border */
     border-radius: 40px; /* Rounded corners */
@@ -38,19 +40,21 @@ select{
     flex-direction: column; /* Column layout */
     align-items: center; /* Center items */
     width:250px; /* Full width */
-    height: 350px; /* Height adjusts to content */
+    height: fit-content; /* Height adjusts to content */
     padding: 20px;
     margin-bottom: 10px; /* Padding inside the card */
+    /* justify-content: center; */
 }
 
 /* Card Content */
 .card__content {
     position: relative;
+    padding-bottom: 30px;
     top: 20px;
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Column layout */
     align-items: center; /* Center items */
-    justify-content: center; /* Center items */
+    justify-content: center;
 }
 
 /* Card Title */
@@ -58,7 +62,7 @@ select{
     color: white; /* Text color */
     text-align: center; /* Center text */
     font-family: 'Afacad'; /* Font family */
-    font-size: 24px; /* Adjusted font size for better readability */
+    font-size: 32px; /* Adjusted font size for better readability */
     margin: 10px 0; /* Margin for spacing */
 }
 
@@ -67,7 +71,7 @@ select{
     color: white; /* Text color */
     text-align: center; /* Center text */
     font-family: 'Afacad'; /* Font family */
-    font-size: 14px; /* Adjusted font size for better readability */
+    font-size: 24px; /* Adjusted font size for better readability */
     margin: 0; /* No margin */
     padding: 0 10px; /* Horizontal padding */
 }
@@ -106,7 +110,7 @@ select{
     color: white; /* Text color */
     border: 1px solid rgba(255, 0, 0, 0.767); /* Button border */
     border-radius: 20px; /* Rounded corners */
-    padding: 10px 20px; /* Padding */
+    /* padding: 10px 20px; Padding */
     font-family: 'Afacad'; /* Font family */
     font-size: 18px; /* Adjusted font size for better readability */
     margin-top: 20px; /* Margin at the top */

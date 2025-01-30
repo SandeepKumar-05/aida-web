@@ -16,7 +16,7 @@ const Filter = () => {
   const [year, setYear] = useState(2023);
   const [filteredData, setFilteredData] = useState(dataset);
   useEffect(() => {
-    handleFilter('2023');
+    handleFilter('2024');
 }, [dataset]);
 
 
@@ -32,33 +32,15 @@ const Filter = () => {
   return (
     <div className="mainDiv">
      
-     <select value={year} onChange={(e) => handleFilter(e.target.value)}>
-        <option key={2023}value={2023}>Select year</option>
+     <select className='btn' value={year} onChange={(e) => handleFilter(e.target.value)}>
         {uniqueYears.map(yr => (
           <option key={yr} value={yr}>
             {yr}
           </option>
         ))}
       </select>
-{/* 
-      <div className="slider">
-      <div className="container">
-        <Marquee speed={50} pauseOnHover={true} direction="left">
-          <div className="cards">
-            {filteredData.map(item => (
-              <div key={item.id} className="card">
-                <img src={item.img} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>{item.role}</p>
-              </div>
-            ))}
-          </div>
-        </Marquee>
-      </div>
-    </div> */}
-
     <Swiper
-            initialSlide={(filteredData.length/4)-1}
+            initialSlide={(filteredData.length/2)}
               effect={'coverflow'}
               grabCursor={true}
               centeredSlides={true}
@@ -81,7 +63,7 @@ const Filter = () => {
               className="mySwiperM"
             >
               {filteredData.map((item, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide>
                   <div className="card">
                     <div className="card__image-container">
                       <img src={item.link} alt="event" className="card__image" />

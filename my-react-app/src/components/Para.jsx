@@ -118,8 +118,6 @@ function Para(props) {
                 repeat={true}
                 wrapper='span'
                 />
-
-                {/* <p>{props.content}</p> */}
             </div>
         </>
     );

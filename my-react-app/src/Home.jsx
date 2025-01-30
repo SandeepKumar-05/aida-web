@@ -7,10 +7,6 @@ import Recent from "./components/Recent";
 import ChatQuestion from "./components/ChatQuestion";
 import ChatAnswer from "./components/ChatAnswer";
 import Members from "./components/Members";
-import EventsPage from "./components/eventspage";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Event from "./components/popup";
 
 
 function Home() {

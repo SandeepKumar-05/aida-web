@@ -12,6 +12,26 @@ import 'swiper/css/navigation';
 
 import pic from './assets/event.png';
 import { TypeAnimation } from "react-type-animation";
+import { data } from "react-router-dom";
+
+const content = [
+  {
+    img: pic,
+    content: "Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+  },
+  {
+    img: pic,
+    content: "Al Tejas R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+  },
+  {
+    img: pic,
+    content: "Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+  },
+  {
+    img: pic,
+    content: "Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+  }
+]
 
 function Recent() {
     return (
@@ -31,33 +51,25 @@ function Recent() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiperR"
       >
-        
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="slideR">
           <img className="eventImg" src={pic} alt="pic"></img>
           <div className="eventContent">
             <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak."/>
           </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slideR">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak."/>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slideR">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak."/>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slideR">
-          <img className="eventImg" src={pic} alt="pic"></img>
-          <Para  indexImg={1} fontsize="22px" content="Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-Uni-  versity Karate Competition to represent APJAKTU in the All India  Inter-University Karate Competition 2024-25 at Maharshi Dayanand Uni-  versity, Rohtak."/>
-          </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
+
+        {content.map((item) => (
+          <SwiperSlide>
+            <div className="slideR">
+            <img className="eventImg" src={item.img} alt="pic"></img>
+            <div className="eventContent">
+              <Para  indexImg={1} fontsize="22px" content={item.content}/>
+            </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
       </>
     );

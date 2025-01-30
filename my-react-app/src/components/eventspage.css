@@ -7,56 +7,6 @@ body {
   padding: 0;
 }
 
-/* Navigation Bar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222;
-  padding: 15px 20px;
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff4747;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li {
-  display: inline;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.navbar .menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.background-glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 10%, transparent 80%);
-  filter: blur(100px);
-  pointer-events: none;
-  transition: transform 0.2s ease-out;
-  transform: translate(-50%, -50%);
-}
-
-/* Page Title */
 .title {
   text-align: start;
   margin-left: 120px;
@@ -67,18 +17,18 @@ body {
 .events-grid {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 90px;
   padding: 20px;
   max-width: 1200px;
   margin: auto;
+  margin-top: 50px;
 }
 
 /* Event Card */
 .event-card {
   background-color: #2a2a2a;
-  border-radius: 20px;
-
+  border-radius: 40px;
   /* padding: 15px; */
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -150,4 +100,104 @@ body {
   position: absolute;
   top: 6%;
   width: 34%;
+}
+
+/* General styles for the popup overlay */
+.reactjs-popup-overlay {
+  position: fixed;
+  
+  background: rgba(0, 0, 0, 0.7);
+  /* backdrop-filter: blur(5px); Background blur effect */
+}
+
+/* Container for the popup content */
+.popup-container {
+  background: #1f1f1f; /* White background for the popup */
+  border-radius: 25px; /* Rounded corners */
+  padding: 20px; /* Padding inside the popup */
+  max-width: 1200px; /* Maximum width of the popup */
+  height: 500px;
+  width: 90%; /* Responsive width */
+  display: flex; /* Flexbox for layout */
+  flex-direction: row; /* Column layout */
+  align-items: center; /* Center items horizontally */
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* Image inside the popup */
+.popup-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Maintain aspect ratio */
+  border-radius: 25px; /* Rounded corners for the image */
+  border: 2px solid red;
+  /* margin-bottom: 15px; */
+  margin-right: 50px; /* Space below the image */
+}
+
+/* Content inside the popup */
+.popup-content {
+  text-align: justify; /* Center text */
+  color: white;
+  margin-right: 50px;
+}
+
+/* Heading style */
+.popup-content h2 {
+  margin: 0 0 20px; /* Margin below the heading */
+  font-size: 1.5rem; /* Font size for the heading */
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+/* Paragraph style */
+.popup-content p {
+  margin: 10px 0; /* Margin above and below paragraphs */
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Link style */
+.popup-link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.popup-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Close button style */
+.close-button {
+  background-color: #dc3545; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 15px; /* Space above the button */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.close-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Trigger button style */
+.trigger-button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.trigger-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.imageButton {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
 }
