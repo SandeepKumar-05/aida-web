@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import pic from "./assets/chatbot.png";
 import "./Certificate.css";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function Certificate() {
   const [input, setInput] = useState(""); // Stores user input
@@ -32,13 +33,14 @@ function Certificate() {
   };
 
   return (
-    <div className="container">
-      {/* <Header /> */}
+    <div className="certificate">
+      <Header />
       <div className="img_mainText">
         <img src={pic} alt="img" />
-        <h2>Verify Your Certificates Here!</h2>
+        <div className="mainText">
+          <h2>Verify Your Certificates Here!</h2>
+        </div>
       </div>
-
       <div className="input_field">
         <input
           value={input}
@@ -50,24 +52,27 @@ function Certificate() {
         <button onClick={verifyCertificate}>Verify</button>
       </div>
 
-      {/* Display certificate details */}
       {certificate && (
         <div className="result">
           {certificate === "Not Found" ? (
-            <h3 style={{ color: "red" }}>Certificate Not Found</h3>
+            <h3 className="notfound">Certificate Not Found</h3>
           ) : (
-            <div>
-              <h3>Certificate Details:</h3>
-              <p><strong>Name:</strong> {certificate.Name}</p>
-              <p><strong>Institution:</strong> {certificate.Institution}</p>
-              <p><strong>Event Name:</strong> {certificate["Event Name"]}</p>
-              <p><strong>Track:</strong> {certificate.Track}</p>
-              <p><strong>Certificate Type:</strong> {certificate["Certificate Type"]}</p>
-              <p><strong>Organized By:</strong> {certificate["Organized By"]}</p>
+            <div className="certificateCard">
+              <h3>Certificate Details</h3>
+              <p>
+                <strong>Name : </strong>
+                {certificate.Name}
+              </p>
+              <p><strong>Institution :</strong> {certificate.Institution}</p>
+              <p><strong>Event Name :</strong> {certificate["Event Name"]}</p>
+              <p><strong>Track :</strong> {certificate.Track}</p>
+              <p><strong>Certificate Type :</strong> {certificate["Certificate Type"]}</p>
+              <p><strong>Organized By :</strong> {certificate["Organized By"]}</p>
             </div>
           )}
         </div>
       )}
+      <Footer></Footer>
     </div>
   );
 }

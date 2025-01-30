@@ -47,7 +47,6 @@ const eventData = [
         img: "https://ik.imagekit.io/AIDA/Past%20Events/Tharang%202023/VRcade-min.png?updatedAt=1697130368361",
         content: "The VRCADE event, hosted by AIDA at Jyothi Engineering College during THARANG, offered an exhilarating introduction to the world of virtual reality. Participants were provided with hands-on experience using the latest VR technology, engaging in various immersive games and activities. The event allowed students to explore the dynamic capabilities of VR, fostering both excitement and curiosity about the future of this technology. The interactive sessions were well-received, with attendees expressing enthusiasm for the realistic and immersive experiences provided by the VR setups"
     },
-      
   ]
 
 export default eventData;

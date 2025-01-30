@@ -4,6 +4,7 @@ import pic from "./assets/event.png"
 import Header from "./Header";
 import Popup from 'reactjs-popup';
 import eventData from './description'
+import Footer from "./Footer";
 const events = eventData;
 
 function EventsPage() {
@@ -53,11 +54,10 @@ function EventsPage() {
                 </div>
               </div>
             </Popup>
-            {/* </div> */}
-
           </div>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };
