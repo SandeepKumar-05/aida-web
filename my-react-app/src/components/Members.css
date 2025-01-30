@@ -21,7 +21,7 @@ select{
 .mySwiperM {
     border: 30px solid #000; /* Outer border */
     border-radius: 40px; /* Rounded corners */
-    background: #000; /* Background color */
+    background: transparent; /* Background color */
     width: 60%; /* Adjusted width for better responsiveness */
     max-width: 1200px; /* Maximum width to prevent it from being too wide */
     height: fit-content; /* Height adjusts to content */
