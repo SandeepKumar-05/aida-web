@@ -12,6 +12,16 @@
     display: flex;
     width: 100%;
     justify-content: center ;
+    padding-top: 10px;
+}
+
+.tester10 {
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center ;
+    padding-top: 10px;
+    padding-left: 40px;
 }
 
 .tester2 {
@@ -65,7 +75,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .TypeAnimation2 {
