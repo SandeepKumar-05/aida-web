@@ -1,0 +1,203 @@
+/* General Page Styling */
+body {
+  background-color: #181818;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: start;
+  margin-left: 120px;
+  font-size: 28px;
+}
+
+/* Events Grid */
+.events-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 90px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Event Card */
+.event-card {
+  background-color: #2a2a2a;
+  border-radius: 40px;
+  /* padding: 15px; */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(255, 0, 0, 0.75);
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.event-info {
+  padding: 10px;
+}
+
+.event-info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.event-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #bbb;
+}
+
+.event {
+  z-index: 10;
+  background-color: #000000;
+  border: 1% solid;
+  border-color: #000000;
+  border-radius: 2%;
+  height: 45%;
+  overflow: hidden;
+  position: relative;
+  width: 97%;
+}
+
+.event .META-HUB-boot-camp-a {
+  color: transparent;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 2.5%;
+  font-weight: 400;
+  left: 44%;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4%;
+  width: 50%;
+}
+
+.event .text-wrapper {
+  color: #ffffff;
+}
+
+.event .span {
+  color: #3e7aae;
+}
+
+.event .whatsapp-image {
+  height: 34%;
+  left: 5%;
+  object-fit: cover;
+  position: absolute;
+  top: 6%;
+  width: 34%;
+}
+
+/* General styles for the popup overlay */
+.reactjs-popup-overlay {
+  position: fixed;
+  
+  background: rgba(0, 0, 0, 0.7);
+  /* backdrop-filter: blur(5px); Background blur effect */
+}
+
+/* Container for the popup content */
+.popup-container {
+  background: #1f1f1f; /* White background for the popup */
+  border-radius: 25px; /* Rounded corners */
+  padding: 20px; /* Padding inside the popup */
+  max-width: 1200px; /* Maximum width of the popup */
+  height: 500px;
+  width: 90%; /* Responsive width */
+  display: flex; /* Flexbox for layout */
+  flex-direction: row; /* Column layout */
+  align-items: center; /* Center items horizontally */
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* Image inside the popup */
+.popup-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Maintain aspect ratio */
+  border-radius: 25px; /* Rounded corners for the image */
+  border: 2px solid red;
+  /* margin-bottom: 15px; */
+  margin-right: 50px; /* Space below the image */
+}
+
+/* Content inside the popup */
+.popup-content {
+  text-align: justify; /* Center text */
+  color: white;
+  margin-right: 50px;
+}
+
+/* Heading style */
+.popup-content h2 {
+  margin: 0 0 20px; /* Margin below the heading */
+  font-size: 1.5rem; /* Font size for the heading */
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+/* Paragraph style */
+.popup-content p {
+  margin: 10px 0; /* Margin above and below paragraphs */
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Link style */
+.popup-link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.popup-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Close button style */
+.close-button {
+  background-color: #dc3545; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 15px; /* Space above the button */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.close-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Trigger button style */
+.trigger-button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.trigger-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.imageButton {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+}

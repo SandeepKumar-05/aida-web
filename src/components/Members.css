@@ -1,0 +1,123 @@
+/* Main Swiper Container */
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+select{
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.mySwiperM {
+    border: 30px solid #000; /* Outer border */
+    border-radius: 40px; /* Rounded corners */
+    background: transparent; /* Background color */
+    width: 60%; /* Adjusted width for better responsiveness */
+    max-width: 1200px; /* Maximum width to prevent it from being too wide */
+    height: fit-content; /* Height adjusts to content */
+    padding: 2% 0 40px; /* Padding at the top and bottom */
+    margin: 0 auto; /* Center the swiper */
+    display: flex; /* Flexbox layout */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 30px; /* Rounded corners */
+    border: 1px solid #fb0000; /* Card border */
+    background: #000; /* Card background */
+    box-shadow: 0px 4px 20px 10px rgba(99, 91, 91, 0.25); /* Shadow effect */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    width:250px; /* Full width */
+    height: fit-content; /* Height adjusts to content */
+    padding: 20px;
+    margin-bottom: 10px; /* Padding inside the card */
+    /* justify-content: center; */
+}
+
+/* Card Content */
+.card__content {
+    position: relative;
+    padding-bottom: 30px;
+    top: 20px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    justify-content: center;
+}
+
+/* Card Title */
+.card__title {
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    font-family: 'Afacad'; /* Font family */
+    font-size: 32px; /* Adjusted font size for better readability */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Card Text */
+.card__text {
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    font-family: 'Afacad'; /* Font family */
+    font-size: 24px; /* Adjusted font size for better readability */
+    margin: 0; /* No margin */
+    padding: 0 10px; /* Horizontal padding */
+}
+
+/* Card Image */
+.card__image {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    margin-top: 20px; /* Reduced margin for better spacing */
+    width: 200px; /* Adjusted image width */
+    height: 200px; /* Adjusted image height */
+    border-radius: 25px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Image Container */
+.card__image-container {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    width: 100%; /* Full width */
+    height: auto; /* Height adjusts to content */
+}
+
+/* Members Section */
+.members {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items */
+    margin-top: 50px; /* Margin at the top */
+}
+
+/* Button Styles */
+.btn {
+    background: #000; /* Button background */
+    color: white; /* Text color */
+    border: 1px solid rgba(255, 0, 0, 0.767); /* Button border */
+    border-radius: 20px; /* Rounded corners */
+    /* padding: 10px 20px; Padding */
+    font-family: 'Afacad'; /* Font family */
+    font-size: 18px; /* Adjusted font size for better readability */
+    margin-top: 20px; /* Margin at the top */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: rgb(174, 0, 0); /* Background color on hover */
+}
