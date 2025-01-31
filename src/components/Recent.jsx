@@ -36,7 +36,7 @@ const content = [
 function Recent() {
     return (
       <>
-      <Para fontsize="30px" content="Let's have a look on what's happening on AIDA" indexImg={10}></Para>
+      <Para fontsize="30px" content="What's New ?" indexImg={10}></Para>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
