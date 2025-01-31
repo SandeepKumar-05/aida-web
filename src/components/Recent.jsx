@@ -17,20 +17,23 @@ import { data } from "react-router-dom";
 const content = [
   {
     img: pic,
-    content: "Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+    content: "We are proud to announce that Al Amthan R. M., a student from S6 AD, has qualified from the South-West Zone Inter-University Karate Competition. He will now represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak. This remarkable achievement highlights his dedication and skill. We wish him the best of luck in the upcoming competition!"
   },
+
   {
-    img: pic,
-    content: "Al Tejas R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+        img:"https://ik.imagekit.io/AIDA/Past%20Events/poster/placement.jpg?updatedAt=1738311185783",
+        content:"The AD department of Jyothi Engineering College is proud to announce the successful placements of eight students in esteemed companies, including Movate, ESAF, and Cognizant. Notably, Movate has recruited five students, showcasing the caliber of our academic programs and the dedication of our students. We extend our heartfelt congratulations to all the placed students and wish them a bright and successful career ahead.",
   },
+  // {
+  //       img:"https://ik.imagekit.io/AIDA/Past%20Events/poster/s7%20topper.jpg?updatedAt=1738311147371",
+  //       content:"The Department of Artificial Intelligence and Data Science is thrilled to announce the top performers of the Semester 7 examinations. Congratulations to Aparnna Joseph, who achieved an impressive SGPA of 9.6, Bhagyalakshmi S, with an SGPA of 9.3, and Gopika PS, who earned an SGPA of 9.2. Their outstanding academic achievements are a testament to their hard work and dedication. We extend our best wishes for their continued success and bright futures ahead!",
+  // },
   {
-    img: pic,
-    content: "Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
-  },
-  {
-    img: pic,
-    content: "Al Amthan R. M. (S6 AD), qualified from the South-West Zone Inter-University Karate Competition to represent APJAKTU in the All India Inter-University Karate Competition 2024-25 at Maharshi Dayanand University, Rohtak."
+        img:"https://ik.imagekit.io/AIDA/Past%20Events/aida%20inaguration/inaguration.jpg?updatedAt=1738311057185",
+        content:"The Artificial Intelligence and Data Science Association (AIDA) at Jyothi Engineering College is excited to invite students and faculty to its inauguration event. Scheduled for January 31st at 2:00 PM in Decennial Hall, this event marks the launch of a new initiative aimed at fostering innovation, collaboration, and learning in the fields of AI and data science. Attendees will have the opportunity to learn about the association's mission, upcoming activities, and how they can get involved. Join us to celebrate this milestone and be a part of our journey towards excellence in AI and data science.",
   }
+    
+    
 ]
 
 function Recent() {

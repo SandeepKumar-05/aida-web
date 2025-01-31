@@ -2,7 +2,7 @@
 import React from 'react';
 import Card from './Card';
 import './Faculty.css';
-import contents from './content'; 
+import FacultyData from './FacultyData';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -12,12 +12,12 @@ function Faculty() {
     <Header />
     <div className='container'>
       <div className="component">
-        {contents.map(content => (
+        {FacultyData.map(content => (
           <Card
           key={content.Id}
-          img={content.link} 
-          name={content.Name}
-          position={content.Position}
+          img={content.pic} 
+          name={content.name}
+          position={content.designation}
           />
         ))}
       </div>
