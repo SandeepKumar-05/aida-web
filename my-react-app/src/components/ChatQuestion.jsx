@@ -1,5 +1,4 @@
 import './ChatQuestion.css'
-import svg from "./assets/chat.svg"
 
 function ChatQuestion(props) {
     return (
