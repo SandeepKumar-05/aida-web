@@ -68,6 +68,22 @@ function Certificate() {
               <p><strong>Track :</strong> {certificate.Track}</p>
               <p><strong>Certificate Type :</strong> {certificate["Certificate Type"]}</p>
               <p><strong>Organized By :</strong> {certificate["Organized By"]}</p>
+              <p><strong>Event Mode :</strong> {certificate["Event Mode"]}</p>
+              <p><strong>Event Type :</strong> {certificate["Event Type"]}</p>
+              {
+                (certificate.Position === "") ? (
+                  <></>
+                ) : (
+                  <p><strong>Position :</strong> {certificate.Position}</p>
+                )
+              }
+              {
+                (certificate.Position === "") ? (
+                  <></>
+                ) : (
+                  <p><strong>Date :</strong> {certificate.Date}</p>
+                )
+              }
             </div>
           )}
         </div>
