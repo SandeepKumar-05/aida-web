@@ -31,7 +31,7 @@ function Header() {
         <div className='HeadComp'>
             <header>
                 <nav className="nav-container">
-                    <Link to="/"><img src={pic} alt="Docplanner Group" className='image' /></Link>
+                    <Link to="/"><img src={'https://ik.imagekit.io/AIDA/Assets%20for%20Web/logo.png?updatedAt=1738262676780'} alt="Docplanner Group" className='image' /></Link>
                     <ul className={'navlist'}>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/events">Events</Link></li>

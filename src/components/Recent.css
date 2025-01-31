@@ -7,7 +7,25 @@
     box-shadow: 0px 4px 30px 30px #111010;
     margin-bottom: 100px;
     margin-top: 20px;
+}
 
+.recentHeading {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.5;
+    justify-self: flex-start;
+    margin-left: 300px;
+    margin-top: 20px;
+    color: #FFF;
+    font-family: 'Afacad';
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.recentHeading:hover {
+    text-decoration: underline red;
 }
 
 .eventImg{
