@@ -24,10 +24,10 @@ const content = [
         img:"https://ik.imagekit.io/AIDA/Past%20Events/poster/placement.jpg?updatedAt=1738311185783",
         content:"The AD department of Jyothi Engineering College is proud to announce the successful placements of eight students in esteemed companies, including Movate, ESAF, and Cognizant. Notably, Movate has recruited five students, showcasing the caliber of our academic programs and the dedication of our students. We extend our heartfelt congratulations to all the placed students and wish them a bright and successful career ahead.",
   },
-  // {
-  //       img:"https://ik.imagekit.io/AIDA/Past%20Events/poster/s7%20topper.jpg?updatedAt=1738311147371",
-  //       content:"The Department of Artificial Intelligence and Data Science is thrilled to announce the top performers of the Semester 7 examinations. Congratulations to Aparnna Joseph, who achieved an impressive SGPA of 9.6, Bhagyalakshmi S, with an SGPA of 9.3, and Gopika PS, who earned an SGPA of 9.2. Their outstanding academic achievements are a testament to their hard work and dedication. We extend our best wishes for their continued success and bright futures ahead!",
-  // },
+  {
+        img:"https://ik.imagekit.io/AIDA/Past%20Events/Recent%20Events/KickBoxingCropped.jpg?updatedAt=1739204539965",
+        content:"Yasin Muhammed P. M. from the Artificial Intelligence and Data Science department of Jyothi Engineering College won gold in the Senior Kick Light (Under 76 kg) category at the UIC National Kickboxing Championship 2025, held at V. K. Krishna Menon Indoor Stadium, Kozhikode. Competing against top athletes nationwide, he showcased remarkable skill and determination, adding to the college’s sporting achievements.",
+  },
   {
         img:"https://ik.imagekit.io/AIDA/Past%20Events/aida%20inaguration/inaguration.jpg?updatedAt=1738311057185",
         content:"The Artificial Intelligence and Data Science Association (AIDA) at Jyothi Engineering College is excited to invite students and faculty to its inauguration event. Scheduled for January 31st at 2:00 PM in Decennial Hall, this event marks the launch of a new initiative aimed at fostering innovation, collaboration, and learning in the fields of AI and data science. Attendees will have the opportunity to learn about the association's mission, upcoming activities, and how they can get involved. Join us to celebrate this milestone and be a part of our journey towards excellence in AI and data science.",
