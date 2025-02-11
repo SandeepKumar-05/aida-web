@@ -9,6 +9,10 @@
     margin-top: 20px;
 }
 
+:root{
+    --swiper-theme-color: #ff0000;
+}
+
 .recentHeading {
     font-size: 64px;
     font-weight: 400;
@@ -34,6 +38,8 @@
     margin-top: 12px;
     margin-left: 14px;
     margin-bottom: 12px;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -42,6 +48,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
 }
 
