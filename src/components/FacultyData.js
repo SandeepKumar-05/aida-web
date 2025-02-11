@@ -16,8 +16,8 @@ const FacultyData = [
     },
     {
         pic:"https://ik.imagekit.io/AIDA/Faculty/V%20ANOOP.jpg?updatedAt=1738313373689",
-        name:"ANOOP V",
-        designation:"ASSOCIATE PROFESSOR"
+        name:"DR. ANOOP V",
+        designation:"PROFESSOR"
     },
     {
         pic:"https://ik.imagekit.io/AIDA/Faculty/RESHMA.jpg?updatedAt=1738313274979",
