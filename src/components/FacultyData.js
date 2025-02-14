@@ -41,7 +41,7 @@ const FacultyData = [
     },
     {
         pic:"https://ik.imagekit.io/AIDA/Faculty/ANAGHA.jpg?updatedAt=1738313560020",
-        name:"ANAGHA",
+        name:"ANAGHA REGY",
         designation:"ASSISTANT PROFESSOR"
     },
     {
@@ -56,7 +56,7 @@ const FacultyData = [
     },
     {
         pic:"https://ik.imagekit.io/AIDA/Faculty/SEENIA%20FRANCIS.jpg?updatedAt=1738294109584",
-        name:"SEENIA FRANCIS",
+        name:"DR. SEENIA FRANCIS",
         designation:"ASSOCIATE PROFESSOR"
     }
     
