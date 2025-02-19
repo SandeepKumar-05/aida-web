@@ -4,11 +4,12 @@ import EventsPage from "./components/eventspage";
 import Certificate from "./components/Certificate";
 import Faculty from "./components/Faculty";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import StarsCanvas from './Canvas/Stars';
 
 function App() {
     return (
       <div className="App">
+        <StarsCanvas />
         <Router>
         <Routes>
           <Route path="/" element={<Home />} />
