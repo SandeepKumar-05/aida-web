@@ -7,16 +7,16 @@
     width: 100vw;
     height: 100vh;
 }
-select{
-    margin-bottom: 50px;
+select {
+    width: 200px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.2rem;
     border: 1px solid black;
     border-radius: 15px;
-    height: 40px;
-    width: 150px;
+    cursor: pointer;
     text-align: center;
-    font-size: 1.2rem;
 }
-
 
 .mySwiperM {
     border: 30px solid #000; /* Outer border */
@@ -29,6 +29,7 @@ select{
     margin: 0 auto; /* Center the swiper */
     display: flex; /* Flexbox layout */
 }
+
 
 /* Card Styles */
 .card {
@@ -120,4 +121,41 @@ select{
 /* Button Hover Effect */
 .btn:hover {
     background: rgb(174, 0, 0); /* Background color on hover */
+}
+
+
+@media (max-width: 480px) {
+    .mySwiperM {
+        width: 100%;
+        border-width: 5px;
+        border-radius: 15px;
+        margin-top: 30px;
+    }
+
+    .swiper-slide {
+        /* flex: 0 0 100%; */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        height: 300px;
+        max-width: 280px;
+        padding: 30px;
+    }
+
+    .card__title {
+        font-size: 18px;
+    }
+
+    .card__text {
+        font-size: 16px;
+    }
+
+    .card__image {
+        width: 150px;
+        height: 150px;
+    }
 }
