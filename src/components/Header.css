@@ -144,6 +144,12 @@ header nav {
 }
 #nav_res{
     display: none;
+    /* width: 100px;
+    height: 200px; */
+}
+
+.list-item-active{
+    display: none;
 }
 @media screen and (max-width: 768px) {
     header {
@@ -162,8 +168,16 @@ header nav {
         margin-top: 20px;
     }
 
+    .list-item-active{
+        display: block;
+    }
+
     .navlist {
         display: block;
+    }
+
+    .navlist li a {
+        display: none;
     }
 
     .hamburger {
@@ -172,6 +186,6 @@ header nav {
 
     .nav-active, .nav-inactive {
         right: 5%;
-        width: 90%;
+        width: 33%;
     }
 }
