@@ -5,7 +5,7 @@ import Certificate from "./components/Certificate";
 import Faculty from "./components/Faculty";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import StarsCanvas from './Canvas/Stars';
-
+import Project from './components/Project'
 function App() {
     return (
       <div className="App">
@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/faculty" element={<Faculty />} />
+          <Route path='/project' element={<Project/>} />
           <Route path="/verify" element={<Certificate />} />
         </Routes>
       </Router>
