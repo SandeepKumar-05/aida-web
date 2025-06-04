@@ -76,7 +76,7 @@ const Filter = () => {
         <img src={arrowdown} className='arrow-icon' />
       </select>
       <Swiper
-        initialSlide={Math.max(Math.floor(filteredData.length / 6) - 1, 0)}
+        initialSlide={Math.max(Math.floor(filteredData.length / 2), 0)}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
