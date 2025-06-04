@@ -13,40 +13,61 @@ import { createClient } from '@supabase/supabase-js';
 import { supabase } from '../supabaseClient';
 
 
-var dataset = [];
-
-const { data: fetchedData, error } = await supabase
-  .from('members')
-  .select('*')
-  .order('id', { ascending: true });
-if (error) {
-  console.error(error);
-} else {
-  console.log(fetchedData);
-  dataset = fetchedData;
-}
-
 const Filter = () => {
   const [year, setYear] = useState(2023);
-  const [filteredData, setFilteredData] = useState(dataset);
+  const [dataset, setDataset] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    handleFilter('2024');
-  }, [dataset]);
+    const fetchMembers = async () => {
+      try {
+        setLoading(true);
+        const { data: fetchedData, error } = await supabase
+          .from('members')
+          .select('*')
+          .order('id', { ascending: true });
+        
+        if (error) {
+          console.error(error);
+        } else {
+          console.log(fetchedData);
+          setDataset(fetchedData || []);
+          handleFilter('2024', fetchedData || []);
+        }
+      } catch (err) {
+        console.error("Error fetching members:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMembers();
+  }, []);
+
+  useEffect(() => {
+    if (dataset.length > 0) {
+      handleFilter(year, dataset);
+    }
+  }, [dataset, year]);
 
 
   // Extract unique years for the dropdown
   const uniqueYears = [...new Set(dataset.map(item => item.year))].sort((a, b) => a - b);
 
-  const handleFilter = (selectedYear) => {
+  const handleFilter = (selectedYear, data = dataset) => {
     setYear(selectedYear);
-    const filtered = selectedYear ? dataset.filter(item => item.year.toString() === selectedYear) : dataset;
+    const filtered = selectedYear ? data.filter(item => item.year.toString() === selectedYear) : data;
     setFilteredData(filtered);
   };
 
   return (
     <div className="mainDiv">
-
-      <select className='btn' value={year} onChange={(e) => handleFilter(e.target.value)}>
+      {loading ? (
+        <div>Loading members...</div>
+      ) : (
+        <>
+          <select className='btn' value={year} onChange={(e) => handleFilter(e.target.value)}>
         {uniqueYears.map(yr => (
           <option key={yr} value={yr}>
             {yr}
@@ -100,8 +121,8 @@ const Filter = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-
+        </>
+      )}
     </div>
   );
 };
