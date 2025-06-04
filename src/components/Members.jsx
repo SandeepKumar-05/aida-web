@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import React, { useState, useEffect } from "react";
-import dataset from './content';
 import { ArrowDown } from 'lucide-react';
 import './Members.css';
 import arrowdown from './assets/arrowdown.png'
@@ -10,6 +9,25 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow} from 'swiper/modules';
+
+var dataset = [];
+
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://auveomwkabcqpfdiqzjs.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1dmVvbXdrYWJjcXBmZGlxempzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2OTQ4NDYsImV4cCI6MjA2NDI3MDg0Nn0.11wQUUq9rMVQBiJrjKHwXR5tqHNqdG9mUwfMVR4KYBk';
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const { data: fetchedData, error } = await supabase
+.from('members')
+.select('*')
+.order('id', { ascending: true });
+if (error) {
+console.error(error);
+} else {
+console.log(fetchedData);
+dataset = fetchedData;
+}
 
 const Filter = () => {
   const [year, setYear] = useState(2023);

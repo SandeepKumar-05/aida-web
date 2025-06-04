@@ -48,6 +48,7 @@ function Header() {
                     <li className='list-item-active'><Link to="/" className='list-item'>Home</Link></li>
                     <li className='list-item-active'><Link to="/events" className='list-item'>Events</Link></li>
                     <li><Link to="/faculty" className='list-item'>Faculty</Link></li>
+                    <li><Link to="/project" className='list-item'>Projects</Link></li>
                     <li><Link to="/verify" className='list-item'>Verify Certificate</Link></li>
                 </div>
             </header>
