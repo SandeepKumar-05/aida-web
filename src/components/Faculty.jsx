@@ -1,49 +1,85 @@
 // src/Component/Faculty.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import './Faculty.css';
-// import FacultyData from './FacultyData';
 import Header from './Header';
 import Footer from './Footer';
-
-
-var FacultyData = [];
-
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = 'https://auveomwkabcqpfdiqzjs.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1dmVvbXdrYWJjcXBmZGlxempzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2OTQ4NDYsImV4cCI6MjA2NDI3MDg0Nn0.11wQUUq9rMVQBiJrjKHwXR5tqHNqdG9mUwfMVR4KYBk';
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-const { data: fetchedData, error } = await supabase
-.from('facultydata')
-.select('*')
-.order('id', { ascending: true });
-if (error) {
-console.error(error);
-} else {
-console.log(fetchedData);
-FacultyData = fetchedData;
-}
+import { supabase } from '../supabaseClient';
 
 function Faculty() {
+  const [facultyData, setFacultyData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchFacultyData() {
+      try {
+        const { data, error } = await supabase
+          .from('facultydata')
+          .select('*')
+          .order('id', { ascending: true });
+
+        if (error) {
+          throw error;
+        }
+
+        setFacultyData(data);
+      } catch (err) {
+        console.error('Error fetching faculty data:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchFacultyData();
+  }, []);
+
+  if (loading) {
+    return (
+      <>
+        <Header />
+        <div className="container">
+          <div className="component">
+            Loading faculty data...
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <>
+        <Header />
+        <div className="container">
+          <div className="component">
+            Error loading faculty data: {error}
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
-    <Header />
-    <div className='container'>
-      <div className="component">
-        {FacultyData.map(content => (
-          <Card
-          key={content.Id}
-          img={content.pic} 
-          name={content.name}
-          position={content.designation}
-          link={content.link}
-          />
-        ))}
+      <Header />
+      <div className='container'>
+        <div className="component">
+          {facultyData.map(content => (
+            <Card
+              key={content.id || content.Id}
+              img={content.pic}
+              name={content.name}
+              position={content.designation}
+              link={content.link}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer></Footer>
+      <Footer />
     </>
   );
 }

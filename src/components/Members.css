@@ -41,7 +41,7 @@ select {
     flex-direction: column; /* Column layout */
     align-items: center; /* Center items */
     width:250px; /* Full width */
-    height: fit-content; /* Height adjusts to content */
+    height: max-content; /* Height adjusts to content */
     padding: 20px;
     margin-bottom: 10px; /* Padding inside the card */
     /* justify-content: center; */

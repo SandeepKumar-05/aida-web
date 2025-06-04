@@ -1,11 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = 'https://auveomwkabcqpfdiqzjs.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1dmVvbXdrYWJjcXBmZGlxempzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2OTQ4NDYsImV4cCI6MjA2NDI3MDg0Nn0.11wQUUq9rMVQBiJrjKHwXR5tqHNqdG9mUwfMVR4KYBk';
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-const { data, error } = await supabase
-.from('members')
-.insert([
+const data = [
   { id: 0, name: 'Vivek', role: 'Executive Member', year: 2022, pr: -13, link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Vivek_executivemember.jpg' },
   { id: 1, name: 'Surya Narayanan', role: 'Executive Member', year: 2022, pr: -11, link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Surya%20Narayanan_executivemember.jpg' },
   { id: 2, name: 'Sreelakshmi', role: 'Executive Member', year: 2022, pr: -9, link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2022-2023/Sreelakshmi_executivemember.jpg' },
@@ -60,12 +53,6 @@ const { data, error } = await supabase
   { id: 51, name: 'Adarsh S', role: 'Executive Member', year: 2024, pr: 6, link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2024-2025/Executive-Adarsh%20S.jpg' },
   { id: 52, name: 'Hiba Rebin', role: 'Executive Member', year: 2024, pr: 8, link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2024-2025/Executive-Hiba%20Rebin.jpg' },
   { id: 53, name: 'Mohamed Naizan P S', role: 'Executive Member', year: 2024, pr: 10, link: 'https://ik.imagekit.io/AIDA/AIDA%20Members/2024-2025/Executive-Mohamed%20Naizan%20P%20S.jpg' }
-])
-
-if (error) {
-  console.log(error)
-} else {
-  console.log(data)
-}
+]
   
 
