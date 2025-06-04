@@ -1,0 +1,147 @@
+.Containerfaculty{
+  height: 100vh;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.flexcontents {
+display: flex;
+width: 100%;
+justify-content: center;
+}
+
+.faculty-dashboard { 
+  height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+/* Other styles remain unchanged */
+
+.dashcontainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dashcomponent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+.cardWhite {
+  background-color: whitesmoke; /* Set card background to white */
+  border: 1px solid #ccc; /* Optional: add a border */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 16px; /* Optional: padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  color: black;
+}
+.faculty-dashboard form {
+  width: 600px;
+  position: relative;
+}
+
+/* Input Styles */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.addicon {
+  height: 350px;
+  width: 90%; /* Use percentage for responsiveness */
+  max-width: 200px; /* Maintain max width */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1.5em;
+  border-radius: 1.875rem;
+  background: whitesmoke;
+  border: 1px solid rgba(255, 0, 0, 0.589);
+  margin: 2.2rem 0rem 1.4rem 0rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+}
+
+.add {
+  color: black;
+  font-size: 50px;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .faculty-dashboard {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    width: 100%; /* Adjust width */
+  }
+
+  .addicon {
+    height: 200px; /* Allow height to adjust */
+    width: 200px; /* Adjust width */
+    left: 0;
+  }
+
+  h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashcomponent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 2 cards */
+@media (max-width: 768px) {
+  .dashcomponent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Mobile: 1 card (optional) */
+@media (max-width: 480px) {
+  .dashcomponent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,94 @@
+.dashboard-container {
+  display: flex;
+  background-color: white;
+  color: black;
+  font-family: 'Afacad';
+}
+
+.sidebar {
+  width: 60px; /* Collapsed width */
+  transition: width 0.3s;
+  background-color: #f8f9fa; /* Modify as per design */
+  overflow: hidden;
+  font-size: 18px;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar.expanded {
+  width: 250px; /* Expanded width */
+}
+
+.header {
+  cursor: pointer;
+  background-color: rgb(228, 79, 79); /* Header background color */
+  color: white;
+  text-align: center;
+  padding: 16px 8px;
+}
+
+.menu {
+  margin-top: 20px; 
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  cursor: pointer;
+  color: black;
+  gap: 5px; /* Text color */
+}
+
+.menu-item:hover {
+  background-color: #e9ecef; /* Hover effect */
+}
+
+.active-menu-item {
+  background-color: #e9ecef;
+  color: white;
+}
+
+.notification-badge {
+  background-color: #dc3545; /* Notification badge color */
+  color: white;
+  border-radius: 12px;
+  padding: 2px 6px;
+  margin-left: auto;
+}
+
+.other-section {
+  margin-top: 30px;
+  border-top: 1px solid rgb(89, 88, 88);
+  padding: 5px 8px;
+}
+
+.dashfooter {
+  position: absolute;
+  bottom: 0;
+  padding: 16px 8px;
+  color: black;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .sidebar.expanded {
+    width: 0; /* Keep it hidden when expanded */
+  }
+
+  .header {
+    padding: 12px 4px; /* Adjust header padding for smaller screens */
+  }
+
+  .menu-item {
+    padding: 5px 4px; /* Adjust padding for smaller screens */
+  }
+
+  .footer {
+    padding: 12px 4px; /* Adjust footer padding for smaller screens */
+  }
+}

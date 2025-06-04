@@ -11,6 +11,7 @@
     border: 1px solid rgba(255, 0, 0, 0.589);
     margin: 2.2rem 0rem 1.4rem 0rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .cards img {
@@ -35,7 +36,6 @@
 
 .Text h4 {
     margin: 0;
-    color: #FFF;
     font-family: 'Afacad', sans-serif;
     font-size: 22px;
     font-weight: 700;
@@ -44,7 +44,6 @@
 .Text h6 {
     margin: 0;
     margin-top: 10px;
-    color: #FFF;
     font-family: 'Afacad', sans-serif;
     font-size: 18px;
     font-weight: 300;

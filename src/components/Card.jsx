@@ -4,13 +4,13 @@ import './Card.css';
 
 function Card(props) {
   return (
-    <div className="cards">
+    <div className={`cards ${props.className}`}> {/* Apply className prop here */}
       <div className="profilePic">
         <img src={props.img} alt="Profile" />
       </div>
       <div className='Text'>
-        <h4>{props.name}</h4> {/* Use 'name' instead of 'Name' to match props */}
-        <h6>{props.position}</h6> {/* Use 'position' instead of 'Position' to match props */}
+        <h4>{props.name}</h4>
+        <h6>{props.position}</h6>
       </div>
     </div>
   );
