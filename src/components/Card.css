@@ -50,12 +50,26 @@
     font-weight: 300;
 }
 
+.links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;;
+}
+
 .linkedin {
     height: 50px;
     width: 50px;
     margin-top: 30px;
-    margin-right: 90px;
+    margin-right: 40px;
 }
+
+.email {
+    height: 50px;
+    width: 50px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
 
 
 
@@ -65,7 +79,7 @@
         height: 280px;
     }
 
-    .cards img {
+    .profilePic img {
         height: 140px;
     }
 
@@ -76,6 +90,13 @@
     .Text h6 {
         font-size: 12px;
     }
+
+    .linkedin {
+    height: 10px;
+    width: 10px;
+    margin-top: 30px;
+    margin-right: 90px;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -85,7 +106,7 @@
         padding: 1em;
     }
 
-    .cards img {
+    .profilePic img {
         height: 120px;
         border-radius: 4rem;
     }
@@ -96,5 +117,25 @@
 
     .Text h6 {
         font-size: 10px;
+    }
+
+    .linkedin {
+    height: 50px;
+    width: 50px;
+    margin-top: 30px;
+    margin-right: 10px;
+    }
+
+    .links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;;
+}
+
+    .email {
+        height: 50px;
+        width: 50px;
+        margin-top: 30px;
+        margin-left: 10px;
     }
 }

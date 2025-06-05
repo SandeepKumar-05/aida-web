@@ -12,10 +12,12 @@ function Card(props) {
       <div className='Text'>
         <h4>{props.name}</h4> {/* Use 'name' instead of 'Name' to match props */}
         <h6>{props.position}</h6> {/* Use 'position' instead of 'Position' to match props */}
-        <div>
+        <div className='links'>
           <a href={props.link}>
-            <img className='linkedin' src={link}>
-            </img>
+            <img className='linkedin' src={link}/>
+          </a>
+          <a href={props.link}>
+            <img className='email' src={link}/>
           </a>
         </div>
       </div>

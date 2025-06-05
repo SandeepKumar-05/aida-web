@@ -46,7 +46,7 @@ function Recent() {
         <div className="recentHeading">
           <p>What's New ?</p>
         </div>
-        <div className="loading">Loading recent updates...</div>
+        <div className="loading">.</div>
       </>
     );
   }
