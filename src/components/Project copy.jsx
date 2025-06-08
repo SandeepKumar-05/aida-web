@@ -11,14 +11,8 @@ function Project() {
 
     <>
       <Header />
-      {/* coming soon */}
-      <div className="coming-soon-container">
-        <h1 className="coming-soon-heading">Projects</h1>
-        <div className="coming-soon-underline"></div>
-        <p className="coming-soon-text">Coming Soon</p>
-      </div>
 
-      {/* <div className="mainCont">
+      <div className="mainCont">
         <div className="select-container" aria-label="Year selectors">
           <select className="year-select" aria-label="Select Year 1">
             <option value="2022">2022</option>
@@ -46,7 +40,7 @@ function Project() {
             <Link to='https://github.com/Sandeepkumarps/Ds-Lab'><AiFillGithub className='git' /> </Link>
           </div>
         </div>
-      </div> */}
+      </div>
       <Footer />
     </>
   )

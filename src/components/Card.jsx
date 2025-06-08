@@ -2,6 +2,7 @@
 import React from 'react';
 import './Card.css';
 import link from './assets/linkedin.svg'
+import mail from './assets/email.svg'
 
 function Card(props) {
   return (
@@ -17,7 +18,7 @@ function Card(props) {
             <img className='linkedin' src={link}/>
           </a>
           <a href={props.link}>
-            <img className='email' src={link}/>
+            <img className='email' src={mail}/>
           </a>
         </div>
       </div>
