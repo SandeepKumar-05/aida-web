@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  width: 100vw;
+  width: 100%;
   height: auto;
   gap: 30px;
   flex-wrap: wrap; /* allow wrapping on narrow screens */

@@ -39,7 +39,7 @@ const EventDashboard = () => {
   };
 
   return (
-    <div>
+    <div className='mainDash'>
       <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
       <div className="ContainerEvent" onClick={handleContentClick}>
         <h1>Events</h1>

@@ -25,11 +25,12 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
   { label: 'Members', icon: <HiOutlineUsers />, route: '/memberdashboard' },
   { label: 'Settings', icon: <CiSettings />, route: '/settings' },
   { label: 'Logout', icon: <CiLogout/>, route: '/Logout' },
+   { label: "dev", icon:    <FaCircleUser />, route: '' }
 ];
 
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-containerSidebar">
       <div className={`sidebar ${isExpanded ? 'expanded' : ''}`}>
         <div className="header" onClick={toggleSidebar}>
           {isExpanded ? <BsBoxArrowLeft /> : <BsBoxArrowInRight />}
@@ -46,20 +47,15 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
             </Link>
           ))}
         </div>
-        <div className="other-section">
-          {isExpanded && <h3>OTHER</h3>}
-          {content.slice(6).map((item, index) => (
-            <div className="menu-item" key={index}>
-              {item.icon}
-              {isExpanded && <span>{item.label}</span>}
+        <div className="dashFooter">
+            {content.slice(6).map((item, index) => (
+              <div className="dashFooter-item" key={index}>
+                {item.icon}
+                {isExpanded && <span>{item.label}</span>}
+              </div>
+            ))}
             </div>
-          ))}
-          <div className="dashfooter">
-            <FaCircleUser />
-            {isExpanded && <span>Sarah Milley</span>}
           </div>
-        </div>
-      </div>
     </div>
   );
 };

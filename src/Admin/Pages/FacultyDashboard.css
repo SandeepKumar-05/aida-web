@@ -3,12 +3,13 @@
   background: white;
   overflow-y: auto;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .flexcontents {
-display: flex;
-width: 100%;
-justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .faculty-dashboard { 
@@ -108,27 +109,11 @@ h1 {
   margin: 20px 0; /* Add some margin for spacing */
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .faculty-dashboard {
-    margin-left: 0; /* Remove left margin on smaller screens */
-    width: 100%; /* Adjust width */
-  }
 
-  .addicon {
-    height: 200px; /* Allow height to adjust */
-    width: 200px; /* Adjust width */
-    left: 0;
-  }
-
-  h1 {
-    font-size: 24px; /* Adjust font size for smaller screens */
-  }
-}
 
 @media (max-width: 1024px) {
   .dashcomponent {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -136,12 +121,16 @@ h1 {
 @media (max-width: 768px) {
   .dashcomponent {
     grid-template-columns: repeat(3, 1fr);
+    text-align: center;
   }
 }
 
-/* Small Mobile: 1 card (optional) */
-@media (max-width: 480px) {
+@media (max-width: 660px) {
   .dashcomponent {
     grid-template-columns: repeat(2, 1fr);
+    /* align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; */
   }
 }

@@ -39,7 +39,7 @@ const FacultyDashboard = () => {
 
   
   return (
-    <div>
+    <div className='mainDash'>
       <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
       <div className="Containerfaculty" onClick={handleContentClick}>
         <h1>FACULTY</h1>

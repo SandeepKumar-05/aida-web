@@ -1,8 +1,9 @@
-.dashboard-container {
+.dashboard-containerSidebar {
   display: flex;
   background-color: white;
   color: black;
   font-family: 'Afacad';
+  /* position: absolute; */
 }
 
 .sidebar {
@@ -12,7 +13,7 @@
   overflow: hidden;
   font-size: 18px;
   height: 100vh;
-  position: fixed;
+  /* position: absolute; */
 }
 
 .sidebar.expanded {
@@ -42,6 +43,10 @@
   cursor: pointer;
   color: black;
   gap: 5px; /* Text color */
+  font-size: 1.5rem;
+}
+.menu-item span{
+  font-size: 1.2rem;
 }
 
 .menu-item:hover {
@@ -61,18 +66,24 @@
   margin-left: auto;
 }
 
-.other-section {
-  margin-top: 30px;
-  border-top: 1px solid rgb(89, 88, 88);
+.dashFooter{
+  bottom: 0;
+  position: absolute;
+  padding: 10px;
+}
+.dashFooter-item {
+  display: flex;
+  align-items: center;
   padding: 5px 8px;
+  cursor: pointer;
+  color: black;
+  gap: 7px; /* Text color */
+  font-size: 1.5rem;
+}
+.dashFooter-item span{
+  font-size: 1.2rem;
 }
 
-.dashfooter {
-  position: absolute;
-  bottom: 0;
-  padding: 16px 8px;
-  color: black;
-}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
