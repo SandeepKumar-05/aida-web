@@ -108,20 +108,18 @@ const ProjectDashboard = () => {
             </div>
           )}
         </div>
-
-      <div className="mainContPro">
         <div className="selectPro" aria-label="Year selectors">
-          <select
-            className="yearSelectPro"
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(Number(e.target.value))}
-          >
-            {uniqueYears.map((year) => (
-              <option key={year} value={year}>{year}</option>
-            ))}
-          </select>
+            <select
+              className="yearSelectPro"
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(Number(e.target.value))}
+            >
+              {uniqueYears.map((year) => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
         </div>
-
+      <div className="mainContPro">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
             <div className="subContPro" key={index}>

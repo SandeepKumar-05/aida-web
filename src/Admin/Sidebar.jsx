@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Sidebar.css';
 import { TfiDashboard } from "react-icons/tfi";
 import { CiSettings } from "react-icons/ci";
@@ -8,54 +8,53 @@ import { GrProjects } from "react-icons/gr";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
 import { HiOutlineUsers } from "react-icons/hi";
-import { BsBoxArrowInRight } from "react-icons/bs";
-import { BsBoxArrowLeft } from "react-icons/bs";
 import { FaCircleUser } from "react-icons/fa6";
-import {Link} from 'react-router-dom'
-
-const Sidebar = ({ isExpanded, toggleSidebar }) => {
-
-
+import { Link } from 'react-router-dom';
+const Sidebar = () => {
   const content = [
-  { label: 'Dashboard', icon: <TfiDashboard />, route: '/dashboard' },
-  { label: 'Faculty', icon: <FaChalkboardTeacher />, route: '/facultydashboard' },
-  { label: 'Project', icon: <GrProjects />, route: '/projectdashboard' },
-  { label: 'Events', icon: <MdEventAvailable />, route: '/eventdashboard' },
-  { label: 'Achivements', icon: <MdOutlineEmojiEvents />, route: '/achivementdashboard' },
-  { label: 'Members', icon: <HiOutlineUsers />, route: '/memberdashboard' },
-  { label: 'Settings', icon: <CiSettings />, route: '/settings' },
-  { label: 'Logout', icon: <CiLogout/>, route: '/Logout' },
-   { label: "dev", icon:    <FaCircleUser />, route: '' }
-];
-
+    { label: 'Dashboard', icon: <TfiDashboard />, route: '/dashboard' },
+    { label: 'Faculty', icon: <FaChalkboardTeacher />, route: '/facultydashboard' },
+    { label: 'Project', icon: <GrProjects />, route: '/projectdashboard' },
+    { label: 'Events', icon: <MdEventAvailable />, route: '/eventdashboard' },
+    { label: 'Achievements', icon: <MdOutlineEmojiEvents />, route: '/achievementdashboard' },
+    { label: 'Members', icon: <HiOutlineUsers />, route: '/memberdashboard' },
+    { label: 'Settings', icon: <CiSettings />, route: '/settings' },
+    { label: 'Logout', icon: <CiLogout />, route: '/logout' },
+    { label: "Profile", icon: <FaCircleUser />, route: '/profile' }
+  ];
 
   return (
     <div className="dashboard-containerSidebar">
-      <div className={`sidebar ${isExpanded ? 'expanded' : ''}`}>
-        <div className="header" onClick={toggleSidebar}>
-          {isExpanded ? <BsBoxArrowLeft /> : <BsBoxArrowInRight />}
-        </div>
-        <div className="menu">
+      <div className="sidebar expanded">
+          <div className="menuDashSide">
           {content.slice(0, 6).map((item, index) => (
-           <Link 
-                to={item.route}
-                className={`menu-item ${location.pathname === item.route ? 'active-menu-item' : ''}`}
-                key={index}> 
-                <div className="menu-item">
-                  {item.icon}{isExpanded && <span>{item.label}</span> }
-                </div>
+            <Link 
+              to={item.route}
+              className={`menu-item ${window.location.pathname === item.route ? 'active-menu-item' : ''}`}
+              key={index}
+            > 
+              <div className="menu-item-content">
+                {item.icon}
+                <span>{item.label}</span>
+              </div>
             </Link>
           ))}
         </div>
         <div className="dashFooter">
-            {content.slice(6).map((item, index) => (
-              <div className="dashFooter-item" key={index}>
+          {content.slice(6).map((item, index) => (
+            <Link 
+              to={item.route}
+              className={`dashFooter-item ${window.location.pathname === item.route ? 'active-menu-item' : ''}`}
+              key={index}
+            >
+              <div className="dashFooter-item-content">
                 {item.icon}
-                {isExpanded && <span>{item.label}</span>}
+                <span>{item.label}</span>
               </div>
-            ))}
-            </div>
-          </div>
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
