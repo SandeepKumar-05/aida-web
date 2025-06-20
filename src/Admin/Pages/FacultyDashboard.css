@@ -50,6 +50,7 @@
 .faculty-dashboard form {
   width: 600px;
   position: relative;
+  padding: 15px;
 }
 
 /* Input Styles */

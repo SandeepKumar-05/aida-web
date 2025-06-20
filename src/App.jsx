@@ -13,6 +13,7 @@ import Dashboard from './Admin/Dashboard';
 import EventDashboard from './Admin/Pages/EventDashboard';
 import AchivementDashboard from './Admin/Pages/AchivementDashboard';
 import ProjectDashboard from './Admin/Pages/ProjectDashboard';
+import MembersDashboard from './Admin/Pages/MembersDashboard';
 function App() {
 
     return (
@@ -31,6 +32,7 @@ function App() {
           <Route path='/facultydashboard' element={<FacultyDashboard/>}/>
           <Route path='/projectdashboard' element={<ProjectDashboard/>} />
           <Route path='/eventdashboard' element={<EventDashboard/>}/>
+          <Route path='/memberdashboard' element={<MembersDashboard/>}/>
           <Route path='/achivementdashboard' element={<AchivementDashboard/>} />
         </Routes>
       </Router>

@@ -2,9 +2,9 @@ import './ProjectDashboard.css';
 import Sidebar from '../Sidebar';
 import React, { useState } from 'react';
 import { IoMdAdd } from "react-icons/io";
-import { AiFillGithub } from "react-icons/ai"; 
+import { FaGithub } from "react-icons/fa";
 import ProjectData from '../../components/projectData'
-
+import { FiUpload } from "react-icons/fi";
 const ProjectDashboard = () => {
   const [projectName, setProjectName] = useState('');
   const [details, setDetails] = useState('');
@@ -54,19 +54,29 @@ const ProjectDashboard = () => {
 
         <div className="flexcontents">
           {showDashboard ? (
-            <div className="project-dashboard">
+            <div className="projectDashboard">
               <form className="form-container" onSubmit={handleSubmit} encType="multipart/form-data">
-                <h1 className="form-header">Project Name</h1>
+              <h1 className="form_header">Add Projects</h1>
+                <h2 className="form-subheader">Project Name</h2>
                 <input
                   type="text"
-                  className="form-input"
+                  className="form-inputPro"
                   value={projectName}
                   onChange={(e) => setProjectName(e.target.value)}
-                  placeholder="Enter project name"
+                  placeholder=" Enter project name"
                   required
                 />
-
+                <h2 className="form-subheader">Project Link<FaGithub className='gitLink'/></h2>
+                 <input
+                  type='link'
+                  className="form-inputPro"
+                  value={details}
+                  onChange={(e) => setDetails(e.target.value)}
+                  placeholder={ "Enter project link"}
+                  required
+                />
                 <h2 className="form-subheader">Details</h2>
+                 <div className="upload-section">
                 <textarea
                   className="form-textarea"
                   value={details}
@@ -75,9 +85,8 @@ const ProjectDashboard = () => {
                   required
                 />
 
-                <div className="upload-section">
                   <label htmlFor="file-upload" className="upload-label">
-                    {selectedFile ? selectedFile.name : 'upload photo'}
+                    {selectedFile ? selectedFile.name : <FiUpload className='uploadLogo'/>}
                   </label>
                   <input
                     id="file-upload"
@@ -127,7 +136,7 @@ const ProjectDashboard = () => {
                 <h1>{project.name}</h1>
                 <p>{project.detail}</p> 
                 <a href={project.gitLink} target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub className="git" />
+                  <FaGithub  className='gitLink'/>
                 </a>
               </div>
             </div>

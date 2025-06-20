@@ -1,31 +1,42 @@
 import './EventDashboard.css';
 import Sidebar from '../Sidebar';
-import React, { useState } from 'react'; 
-import { IoMdAdd } from "react-icons/io";
+import React, { useState } from 'react';
+import { IoMdAdd } from 'react-icons/io';
+import { FiUpload } from 'react-icons/fi';
+import { FaLink } from 'react-icons/fa';
 import eventData from '../../components/description';
 
 const EventDashboard = () => {
-   const events = eventData;
-
-  const [name, setName] = useState('');
-  const [position, setPosition] = useState('');
-  const [email, setEmail] = useState('');
-  const [linkedin, setLinkedIn] = useState('');
-  const [photo, setPhoto] = useState(null);
-  const [showDashboard, setShowDashboard] = useState(false);
+  const [eventName, setEventName] = useState('');
+  const [eventLink, setEventLink] = useState('');
+  const [eventDetails, setEventDetails] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [showForm, setShowForm] = useState(false);
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
-  
-  const handleFileChange = (e) => {
-    setPhoto(e.target.files[0]);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ name, position, email, linkedin, photo });
+    console.log({
+      eventName,
+      eventLink,
+      eventDetails,
+      file: selectedFile,
+    });
+
+    // Clear form after submission
+    setEventName('');
+    setEventLink('');
+    setEventDetails('');
+    setSelectedFile(null);
+    setShowForm(false);
   };
 
-  const handlePulseClick = () => {
-    setShowDashboard(!showDashboard);
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+  };
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
   };
 
   const toggleSidebar = () => {
@@ -33,84 +44,90 @@ const EventDashboard = () => {
   };
 
   const handleContentClick = () => {
-    if (isSidebarExpanded) {
-      setIsSidebarExpanded(false); // Collapse the sidebar when clicking on content
-    }
+    if (isSidebarExpanded) setIsSidebarExpanded(false);
   };
 
   return (
-    <div className='mainDash'>
+    <div className="mainDash">
       <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} />
       <div className="ContainerEvent" onClick={handleContentClick}>
         <h1>Events</h1>
         <div className="flexcontentsEvent">
-          {showDashboard ? (
-            <div className="event-dashboard">
-              <form onSubmit={handleSubmit}>
-                <p>New</p>
-                <div>
+          <div className="flexcontents">
+            {showForm ? (
+              <div className="eventFormSection">
+                <form
+                  className="eventForm"
+                  onSubmit={handleSubmit}
+                  encType="multipart/form-data"
+                >
+                  <h1 className="form_headerEvent">Add Event</h1>
+
+                  <h2 className="form-subheaderEvent">Event Name</h2>
                   <input
                     type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    className="form-inputEvent"
+                    value={eventName}
+                    onChange={(e) => setEventName(e.target.value)}
+                    placeholder="Enter event name"
                     required
                   />
-                </div>
-                <div>
+
+                  <h2 className="form-subheaderEvent">Event Link <FaLink className="gitLink" /></h2>
                   <input
-                    type="text"
-                    placeholder="Faculty Position"
-                    value={position}
-                    onChange={(e) => setPosition(e.target.value)}
+                    type="url"
+                    className="form-inputEvent"
+                    value={eventLink}
+                    onChange={(e) => setEventLink(e.target.value)}
+                    placeholder="Enter event link"
                     required
                   />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+
+                  <h2 className="form-subheaderEvent">Event Details</h2>
+                  <textarea
+                    className="form-textarea"
+                    value={eventDetails}
+                    onChange={(e) => setEventDetails(e.target.value)}
+                    placeholder="Enter event description"
                     required
                   />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="LinkedIn URL"
-                    value={linkedin}
-                    onChange={(e) => setLinkedIn(e.target.value)}
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="file"
-                    onChange={handleFileChange}
-                    accept="image/*"
-                  />
-                  <span>Upload Photo</span>
-                </div>
-                <button type="submit">Submit</button>
-              </form>
-            </div>
-          ) : (
-            <div className="addiconevent">
-              <IoMdAdd onClick={handlePulseClick} className="addevent" />
-            </div>
-          )}
-        </div>
-        <div className="dashevents-grid">
-          {events.map((event, index) => (
-            <div className="dashevent-card" key={index}>
-              <img src={event.img} alt="Event" className="dashimageButton" />
-              <div className="dashevent-content">
-                <h3>{event.title}</h3>
-                <p>{event.content}</p>
+
+                  <div className="upload-sectionEvent">
+                    <label htmlFor="file-upload" className="upload-labelEvent">
+                      {selectedFile ? selectedFile.name : <FiUpload className="uploadLogoEvent" />}
+                    </label>
+                    <input
+                      id="file-upload"
+                      type="file"
+                      onChange={handleFileChange}
+                      accept="image/*"
+                      style={{ display: 'none' }}
+                    />
+                  </div>
+
+                  <button type="submit" className="submit-buttonEvent">
+                    Submit
+                  </button>
+                </form>
               </div>
-            </div>
-          ))}
+            ) : (
+              <div className="addicon">
+                <IoMdAdd onClick={toggleForm} className="add" />
+              </div>
+            )}
+          </div>
+
+          <div className="dashevents-grid">
+            {eventData.map((event, index) => (
+              <div className="dashevent-card" key={index}>
+                <img src={event.img} alt="Event" className="dashimageButton" />
+                <div className="dashevent-content">
+                  <h3>{event.title}</h3>
+                  <p>{event.content}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
