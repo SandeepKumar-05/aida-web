@@ -5,7 +5,7 @@ import { AiFillGithub } from 'react-icons/ai';
 import ProjectData from './projectData';
 import Footer from './Footer';
 
-function Project() {
+function Project(props) {
   
   const [selectedYear,setSelectedYear] = useState(2023)
   const uniqueYears = [...new Set(ProjectData.map(project => project.year))];
@@ -17,7 +17,7 @@ function Project() {
       <div className="mainCont">
         <div className="select-container" aria-label="Year selectors">
           <select
-            className="year-select"
+            className="year-select" 
             value={selectedYear}
             onChange={(e) => setSelectedYear(Number(e.target.value))} 
           >
@@ -29,7 +29,7 @@ function Project() {
 
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
-            <div className="subCont" key={index}>
+            <div className= "subCont"  key={index}>
               <div className="img_side">
                 <img src={project.img} alt={project.name} />
               </div>

@@ -100,10 +100,10 @@ const ProjectDashboard = () => {
           )}
         </div>
 
-      {/* <div className="mainCont">
-        <div className="selectDash" aria-label="Year selectors">
+      <div className="mainContPro">
+        <div className="selectPro" aria-label="Year selectors">
           <select
-            className="year-select"
+            className="yearSelectPro"
             value={selectedYear}
             onChange={(e) => setSelectedYear(Number(e.target.value))}
           >
@@ -115,15 +115,15 @@ const ProjectDashboard = () => {
 
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
-            <div className="subCont" key={index}>
-              <div className="img_side">
+            <div className="subContPro" key={index}>
+              <div className="img_sidePro">
                 <img
                   src={project.img}
                   alt={project.name}
                   onError={(e) => (e.target.src = '/fallback.jpg')}
                 />
               </div>
-              <div className="content">
+              <div className="contentProjectDash">
                 <h1>{project.name}</h1>
                 <p>{project.detail}</p> 
                 <a href={project.gitLink} target="_blank" rel="noopener noreferrer">
@@ -135,7 +135,7 @@ const ProjectDashboard = () => {
         ) : (
           <p>No projects found for {selectedYear}.</p>
         )}
-      </div> */}
+      </div>
       </div>
     </div>
   );
