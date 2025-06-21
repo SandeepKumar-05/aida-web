@@ -63,9 +63,13 @@
   margin-left: 15px;
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+  /* .dashboard-containerSidebar{
+    width: 50%;
+    
+  } */
   .sidebar {
-    width: 100%;
+    width: 50%;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -95,4 +99,10 @@
     border-left: none;
     border-bottom: 4px solid rgb(228, 79, 79);
   }
+}
+@media (max-width:480px) {
+  .dashboard-containerSidebar{
+    width: 10%;
+  }
+  
 }

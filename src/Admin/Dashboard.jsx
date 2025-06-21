@@ -1,27 +1,62 @@
 import React,{useState}from 'react';
 import './Dashboard.css';
-import { FaUsers, FaCalendarAlt, FaTrophy, FaProjectDiagram, FaChalkboardTeacher, FaChartLine } from 'react-icons/fa';
+import { FaUsers, FaCalendarAlt, FaProjectDiagram,FaTrophy, FaChalkboardTeacher, FaChartLine } from 'react-icons/fa';
 import { BarChart, Bar, PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Sidebar from './Sidebar';
-
+import facultyDataDash from '../components/FacultyData';
+import contentDash from '../components/content'
+import eventDataDash from '../components/description';
+import projectDataDash from '../components/projectData'
 const Dashboard = () => {
     const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
-  
-  // Sample data for charts
-  const eventData = [
-    { name: 'Jan', events: 2 },
-    { name: 'Feb', events: 3 },
-    { name: 'Mar', events: 5 },
-    { name: 'Apr', events: 4 },
-    { name: 'May', events: 7 },
-    { name: 'Jun', events: 6 },
-  ];
+    const currentYear = new Date().getFullYear();
+    const lenFacultyData =  facultyDataDash.length
+    const lenExecutiveMem = contentDash.filter(item => item.year === 2024).length;
+    const today = new Date();
+    const upcomingEvents = eventDataDash.filter(item => new Date(item.date) > today).length;
+    const lenProjectData =  projectDataDash.filter(item => item.year === currentYear && item.status === 'completed').length ;
 
-  const projectStatusData = [
-    { name: 'Completed', value: 12 },
-    { name: 'Ongoing', value: 8 },
-    { name: 'Planning', value: 5 },
-  ];
+    const facultyData = facultyDataDash
+    const memberData = contentDash.filter(item => item.year === 2024 );
+
+    // Event Chart
+    
+    const previousYear = currentYear - 1;
+
+    const eventsByYear = {};
+    eventDataDash.forEach(event => {
+      const year = new Date(event.date).getFullYear();
+      eventsByYear[year] = (eventsByYear[year] || 0) + 1;
+    });
+
+
+    const filteredYears = Object.keys(eventsByYear)
+      .map(year => parseInt(year))
+      .filter(year => year >= previousYear)
+      .sort((a, b) => a - b); // Ensure chronological order
+
+    const chartData = filteredYears.map(year => ({
+      name: year.toString(),
+      events: eventsByYear[year]
+    }));
+
+    // Project piechart
+   const statusCount = {};
+    projectDataDash.forEach(project => {
+      const status = project.status?.toLowerCase(); // ensure lowercase match
+
+      // Only count if status is 'completed', 'ongoing', or 'planning'
+      if (status === 'completed' || status === 'ongoing' || status === 'planning') {
+        statusCount[status] = (statusCount[status] || 0) + 1;
+      }
+    });
+
+    // Convert to array for PieChart
+    const projectStatusData = Object.keys(statusCount).map(status => ({
+      name: status.charAt(0).toUpperCase() + status.slice(1), // Capitalize
+      value: statusCount[status]
+    }));
+
 
   const achievementData = [
     { name: 'Academic', value: 15 },
@@ -63,11 +98,21 @@ const Dashboard = () => {
       <div className="summary-cards">
         <div className="card">
           <div className="card-icon" style={{ backgroundColor: '#ffebee' }}>
+            <FaChalkboardTeacher  style={{ color: '#d32f2f' }} />
+          </div>
+          <div className="card-content">
+            <h3>Faculty</h3>
+            <p>{lenFacultyData}</p>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-icon" style={{ backgroundColor: '#ffebee' }}>
             <FaUsers style={{ color: '#d32f2f' }} />
           </div>
           <div className="card-content">
-            <h3>Executive Members</h3>
-            <p>24</p>
+            <h3>Exective Members</h3>
+            <p>{lenExecutiveMem}</p>
           </div>
         </div>
 
@@ -76,18 +121,8 @@ const Dashboard = () => {
             <FaCalendarAlt style={{ color: '#d32f2f' }} />
           </div>
           <div className="card-content">
-            <h3>Upcoming Events</h3>
-            <p>7</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="card-icon" style={{ backgroundColor: '#ffebee' }}>
-            <FaTrophy style={{ color: '#d32f2f' }} />
-          </div>
-          <div className="card-content">
-            <h3>Achievements</h3>
-            <p>35</p>
+            <h3>Upcomming Events</h3>
+            <p>{upcomingEvents}</p>
           </div>
         </div>
 
@@ -96,8 +131,8 @@ const Dashboard = () => {
             <FaProjectDiagram style={{ color: '#d32f2f' }} />
           </div>
           <div className="card-content">
-            <h3>Active Projects</h3>
-            <p>13</p>
+            <h3>Projects Completed</h3>
+            <p>{lenProjectData}</p>
           </div>
         </div>
       </div>
@@ -105,74 +140,75 @@ const Dashboard = () => {
       {/* Charts Section */}
       <div className="charts-section">
         <div className="chart-container">
-          <h3><FaChartLine /> Events This Year</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={eventData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="events" fill="#d32f2f" />
-            </BarChart>
-          </ResponsiveContainer>
+        <h3><FaChartLine /> Events This Year</h3>
+        <ResponsiveContainer width="100%" height={300}>
+          <BarChart data={chartData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="events" fill="#d32f2f" />
+          </BarChart>
+        </ResponsiveContainer>
         </div>
 
         <div className="chart-container">
-          <h3><FaChartLine /> Project Status</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={projectStatusData}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                {projectStatusData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
+           <h3><FaChartLine /> Project Status</h3>
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie
+                  data={projectStatusData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  labelLine={false}
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  {projectStatusData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
         </div>
       </div>
 
       {/* Additional Information Section */}
       <div className="info-section">
         <div className="executive-members">
-          <h3><FaUsers /> Executive Members</h3>
+          <h3><FaChalkboardTeacher /> Faculty Members</h3>
           <div className="members-list">
-            {executiveMembers.map(member => (
-              <div key={member.id} className="member-card">
-                <div className="member-avatar">{member.name.charAt(0)}</div>
+            {facultyData.slice(0, 4).map(faculty => (
+              <div key={faculty.id} className="member-card">
+                <div className="member-avatar">{faculty.name.charAt(0)}</div>
                 <div className="member-info">
-                  <h4>{member.name}</h4>
-                  <p>{member.position}</p>
-                  <span>{member.department}</span>
+                  <h4>{faculty.name}</h4>
+                  <p>{faculty.designation}</p>
+                  {/* <span>{faculty.department}</span> */}
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="recent-activities">
-          <h3><FaCalendarAlt /> Recent Activities</h3>
-          <ul>
-            {recentActivities.map(activity => (
-              <li key={activity.id}>
-                <div className="activity-type">{activity.type}</div>
-                <div className="activity-details">
-                  <h4>{activity.title}</h4>
-                  <p>{new Date(activity.date).toLocaleDateString()}</p>
+         <div className="executive-members">
+          <h3><FaUsers /> Executive Members</h3>
+          <div className="members-list">
+            {memberData.slice(0,4).map(member => (
+              <div key={member.id} className="member-card">
+                <div className="member-avatar">{member.name.charAt(0)}</div>
+                <div className="member-info">
+                  <h4>{member.name}</h4>
+                  <p>{member.position}</p>
+                  {/* <span>{member.department}</span> */}
                 </div>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
 

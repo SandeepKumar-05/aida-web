@@ -36,6 +36,8 @@
 .img_side {
   width: 50%;
   padding-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .img_side img {
@@ -129,10 +131,10 @@
   outline: none;
 }
 
-/* ===== Responsive Design ===== */
+
 @media (max-width: 1024px) {
   .subCont {
-    width: calc(50% - 20px);
+    width: 90%;
   }
 }
 
@@ -209,5 +211,10 @@
   .year-select {
     width: 100%;
     max-width: 160px;
+  }
+  .img_side{
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 }

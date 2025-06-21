@@ -4,15 +4,16 @@ import React, { useState } from 'react';
 import { IoMdAdd } from "react-icons/io";
 import Card from '../../components/Card';
 import FacultyData from '../../components/FacultyData';
+import { FiUpload } from "react-icons/fi";
 
 const FacultyDashboard = () => {
   const [name, setName] = useState('');
   const [position, setPosition] = useState('');
   const [email, setEmail] = useState('');
   const [linkedin, setLinkedIn] = useState('');
-  const [photo, setPhoto] = useState(null);
   const [showDashboard, setShowDashboard] = useState(false);
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
   
   const handleFileChange = (e) => {
     setPhoto(e.target.files[0]);
@@ -48,7 +49,7 @@ const FacultyDashboard = () => {
             <div className="faculty-dashboard">
               <form onSubmit={handleSubmit}>
                 <p>New</p>
-                <div>
+                <div className='formDetails'>
                   <input
                     type="text"
                     placeholder="Name"
@@ -56,8 +57,7 @@ const FacultyDashboard = () => {
                     onChange={(e) => setName(e.target.value)}
                     required
                   />
-                </div>
-                <div>
+             
                   <input
                     type="text"
                     placeholder="Faculty Position"
@@ -65,8 +65,7 @@ const FacultyDashboard = () => {
                     onChange={(e) => setPosition(e.target.value)}
                     required
                   />
-                </div>
-                <div>
+               
                   <input
                     type="email"
                     placeholder="Email"
@@ -74,8 +73,7 @@ const FacultyDashboard = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
-                </div>
-                <div>
+              
                   <input
                     type="text"
                     placeholder="LinkedIn URL"
@@ -84,14 +82,23 @@ const FacultyDashboard = () => {
                     required
                   />
                 </div>
-                <div>
-                  <input
+                  <div className="upload-sectionFaculty">    
+                    <label htmlFor="file-upload" className="upload-labelFaculty">
+                    {selectedFile ? selectedFile.name : (
+                        <>
+                        <FiUpload className="uploadLogoFaculty" />
+                        <span>Upload Photo</span>
+                        </>
+                    )}
+                    </label>
+                    <input
+                    id="file-upload"
                     type="file"
                     onChange={handleFileChange}
                     accept="image/*"
-                  />
-                  <span>Upload Photo</span>
-                </div>
+                    style={{ display: 'none' }}
+                    />
+                  </div>
                 <button type="submit">Submit</button>
               </form>
             </div>
